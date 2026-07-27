@@ -18,15 +18,9 @@
     },
     "heading": {
       "type": "string",
-      "default": "Комплексная диагностика автомобиля"
-    },
-    "headingAccent": {
-      "type": "string",
-      "default": "бесплатно"
-    },
-    "headingRest": {
-      "type": "string",
-      "default": "при ремонте в автосервисе"
+      "source": "html",
+      "selector": "h1",
+      "default": "Комплексная диагностика автомобиля <span class=\"accent\">бесплатно</span> при ремонте в автосервисе"
     },
     "lead": {
       "type": "string",

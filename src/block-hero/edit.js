@@ -4,6 +4,8 @@ import {
 	InspectorControls,
 	MediaUpload,
 	MediaUploadCheck,
+	RichText,
+	BlockControls,
 } from "@wordpress/block-editor";
 import {
 	PanelBody,
@@ -13,12 +15,21 @@ import {
 } from "@wordpress/components";
 import "./editor.scss";
 
+const HEADING_ALLOWED_FORMATS = [
+	"core/bold",
+	"core/italic",
+	"core/text-color",
+	"core/link",
+	"core/strikethrough",
+	"core/superscript",
+	"core/subscript",
+	"core/highlight",
+];
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		eyebrow,
 		heading,
-		headingAccent,
-		headingRest,
 		lead,
 		oldPrice,
 		priceValue,
@@ -42,6 +53,8 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
+			<BlockControls group="inline" />
+
 			<InspectorControls>
 				<PanelBody
 					title={__("Настройки Hero-блока", "blocks-garage")}
@@ -52,26 +65,19 @@ export default function Edit({ attributes, setAttributes }) {
 						value={eyebrow}
 						onChange={(val) => setAttributes({ eyebrow: val })}
 					/>
-					<TextControl
-						label={__("Заголовок (начало)", "blocks-garage")}
-						value={heading}
-						onChange={(val) => setAttributes({ heading: val })}
-					/>
-					<TextControl
-						label={__("Заголовок (акцентное слово)", "blocks-garage")}
-						value={headingAccent}
-						onChange={(val) => setAttributes({ headingAccent: val })}
-					/>
-					<TextControl
-						label={__("Заголовок (окончание)", "blocks-garage")}
-						value={headingRest}
-						onChange={(val) => setAttributes({ headingRest: val })}
-					/>
 					<TextareaControl
 						label={__("Подзаголовок (lead)", "blocks-garage")}
 						value={lead}
 						onChange={(val) => setAttributes({ lead: val })}
 					/>
+					<p
+						style={{ margin: "16px 0 8px", fontSize: "12px", color: "#757575" }}
+					>
+						{__(
+							"Заголовок H1 редактируется прямо в блоке. Выделите текст и используйте тулбар, чтобы выбрать цвет или применить форматирование.",
+							"blocks-garage",
+						)}
+					</p>
 				</PanelBody>
 
 				<PanelBody
@@ -202,10 +208,15 @@ export default function Edit({ attributes, setAttributes }) {
 				<div className="wrap hero-grid">
 					<div className="hero-content">
 						<div className="eyebrow">{eyebrow}</div>
-						<h1>
-							{heading} <span className="accent">{headingAccent}</span>{" "}
-							{headingRest}
-						</h1>
+						<RichText
+							tagName="h1"
+							value={heading}
+							onChange={(val) => setAttributes({ heading: val })}
+							placeholder={__("Введите заголовок H1…", "blocks-garage")}
+							allowedFormats={HEADING_ALLOWED_FORMATS}
+							multiline={false}
+							preserveWhiteSpace={true}
+						/>
 						<p className="hero-lead">{lead}</p>
 
 						<div className="offer-box">
@@ -244,6 +255,8 @@ export default function Edit({ attributes, setAttributes }) {
 										alignItems: "center",
 										justifyContent: "center",
 										color: "#666",
+										textAlign: "center",
+										padding: "20px",
 									}}
 								>
 									{__("Выберите изображение в настройках", "blocks-garage")}

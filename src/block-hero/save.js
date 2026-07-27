@@ -1,11 +1,9 @@
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
 export default function save({ attributes }) {
 	const {
 		eyebrow,
 		heading,
-		headingAccent,
-		headingRest,
 		lead,
 		oldPrice,
 		priceValue,
@@ -32,10 +30,7 @@ export default function save({ attributes }) {
 			<div className="wrap hero-grid">
 				<div className="hero-content">
 					<div className="eyebrow">{eyebrow}</div>
-					<h1>
-						{heading} <span className="accent">{headingAccent}</span>{" "}
-						{headingRest}
-					</h1>
+					<RichText.Content tagName="h1" value={heading} />
 					<p className="hero-lead">{lead}</p>
 
 					<div className="offer-box">

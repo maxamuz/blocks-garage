@@ -23,15 +23,9 @@ return array(
 			),
 			'heading' => array(
 				'type' => 'string',
-				'default' => 'Комплексная диагностика автомобиля'
-			),
-			'headingAccent' => array(
-				'type' => 'string',
-				'default' => 'бесплатно'
-			),
-			'headingRest' => array(
-				'type' => 'string',
-				'default' => 'при ремонте в автосервисе'
+				'source' => 'html',
+				'selector' => 'h1',
+				'default' => 'Комплексная диагностика автомобиля <span class="accent">бесплатно</span> при ремонте в автосервисе'
 			),
 			'lead' => array(
 				'type' => 'string',
