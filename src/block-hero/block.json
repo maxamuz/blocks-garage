@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-garage/block-hero",
+	"version": "0.1.0",
+	"title": "Block Hero",
+	"category": "widgets",
+	"icon": "car",
+	"description": "Hero-блок с акционным предложением автосервиса.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Услуги автосервиса в САО Москвы"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Диагностика автомобиля"
+		},
+		"headingAccent": {
+			"type": "string",
+			"default": "бесплатно"
+		},
+		"headingRest": {
+			"type": "string",
+			"default": "при ремонте в автосервисе"
+		},
+		"lead": {
+			"type": "string",
+			"default": "Диагностика дилерского уровня — точное определение неисправности и честный расчёт стоимости ремонта, без «развода» на лишние работы."
+		},
+		"priceValue": {
+			"type": "string",
+			"default": "0₽"
+		},
+		"priceSubtext": {
+			"type": "string",
+			"default": "при ремонте у нас"
+		},
+		"offerTitle": {
+			"type": "string",
+			"default": "Диагностика"
+		},
+		"offerText": {
+			"type": "string",
+			"default": "дилерского уровня — бесплатно, если выполняете ремонт у нас в автосервисе. Сначала честно скажем, что не так, и только потом чиним."
+		},
+		"cta1Text": {
+			"type": "string",
+			"default": "Записаться на диагностику"
+		},
+		"cta1Href": {
+			"type": "string",
+			"default": "#lead"
+		},
+		"cta2Text": {
+			"type": "string",
+			"default": "Смотреть цены"
+		},
+		"cta2Href": {
+			"type": "string",
+			"default": "#price"
+		},
+		"note": {
+			"type": "string",
+			"default": "Принимаем автомобили любых марок, годов выпуска и с любым пробегом — состояние машины не влияет на качество диагностики."
+		},
+		"imageSrc": {
+			"type": "string",
+			"default": "diag-hero.jpg"
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": "Диагностика автомобиля в автосервисе Гараж САО"
+		},
+		"badgeMain": {
+			"type": "string",
+			"default": "Диагностика"
+		},
+		"badgeSub": {
+			"type": "string",
+			"default": "дилерского уровня"
+		}
+	},
+	"textdomain": "blocks-garage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
