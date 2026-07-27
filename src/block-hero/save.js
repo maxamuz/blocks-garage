@@ -7,6 +7,7 @@ export default function save({ attributes }) {
 		headingAccent,
 		headingRest,
 		lead,
+		oldPrice,
 		priceValue,
 		priceSubtext,
 		offerTitle,
@@ -39,6 +40,7 @@ export default function save({ attributes }) {
 
 					<div className="offer-box">
 						<div className="price">
+							{oldPrice && <span className="old-price">{oldPrice}</span>}
 							{priceValue}
 							<sub>{priceSubtext}</sub>
 						</div>

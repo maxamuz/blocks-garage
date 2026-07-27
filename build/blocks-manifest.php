@@ -23,7 +23,7 @@ return array(
 			),
 			'heading' => array(
 				'type' => 'string',
-				'default' => 'Диагностика автомобиля'
+				'default' => 'Комплексная диагностика автомобиля'
 			),
 			'headingAccent' => array(
 				'type' => 'string',
@@ -36,6 +36,10 @@ return array(
 			'lead' => array(
 				'type' => 'string',
 				'default' => 'Диагностика дилерского уровня — точное определение неисправности и честный расчёт стоимости ремонта, без «развода» на лишние работы.'
+			),
+			'oldPrice' => array(
+				'type' => 'string',
+				'default' => '5950'
 			),
 			'priceValue' => array(
 				'type' => 'string',

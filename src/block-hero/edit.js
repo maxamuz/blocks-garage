@@ -1,6 +1,16 @@
 import { __ } from "@wordpress/i18n";
-import { useBlockProps, InspectorControls, MediaUpload, MediaUploadCheck } from "@wordpress/block-editor";
-import { PanelBody, TextControl, TextareaControl, Button } from "@wordpress/components";
+import {
+	useBlockProps,
+	InspectorControls,
+	MediaUpload,
+	MediaUploadCheck,
+} from "@wordpress/block-editor";
+import {
+	PanelBody,
+	TextControl,
+	TextareaControl,
+	Button,
+} from "@wordpress/components";
 import "./editor.scss";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -10,6 +20,7 @@ export default function Edit({ attributes, setAttributes }) {
 		headingAccent,
 		headingRest,
 		lead,
+		oldPrice,
 		priceValue,
 		priceSubtext,
 		offerTitle,
@@ -25,12 +36,17 @@ export default function Edit({ attributes, setAttributes }) {
 		badgeSub,
 	} = attributes;
 
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: "hero",
+	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__("Настройки Hero-блока", "blocks-garage")} initialOpen={true}>
+				<PanelBody
+					title={__("Настройки Hero-блока", "blocks-garage")}
+					initialOpen={true}
+				>
 					<TextControl
 						label={__("Надзаголовок (eyebrow)", "blocks-garage")}
 						value={eyebrow}
@@ -58,7 +74,15 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__("Оффер-блок", "blocks-garage")} initialOpen={false}>
+				<PanelBody
+					title={__("Оффер-блок", "blocks-garage")}
+					initialOpen={false}
+				>
+					<TextControl
+						label={__("Старая цена (зачёркнутая)", "blocks-garage")}
+						value={oldPrice}
+						onChange={(val) => setAttributes({ oldPrice: val })}
+					/>
 					<TextControl
 						label={__("Значение цены", "blocks-garage")}
 						value={priceValue}
@@ -81,7 +105,10 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__("Кнопки CTA", "blocks-garage")} initialOpen={false}>
+				<PanelBody
+					title={__("Кнопки CTA", "blocks-garage")}
+					initialOpen={false}
+				>
 					<TextControl
 						label={__("Текст кнопки 1", "blocks-garage")}
 						value={cta1Text}
@@ -104,7 +131,10 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__("Примечание", "blocks-garage")} initialOpen={false}>
+				<PanelBody
+					title={__("Примечание", "blocks-garage")}
+					initialOpen={false}
+				>
 					<TextareaControl
 						label={__("Текст примечания", "blocks-garage")}
 						value={note}
@@ -112,7 +142,10 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__("Изображение и бейдж", "blocks-garage")} initialOpen={false}>
+				<PanelBody
+					title={__("Изображение и бейдж", "blocks-garage")}
+					initialOpen={false}
+				>
 					<MediaUploadCheck>
 						<MediaUpload
 							onSelect={(media) => {
@@ -130,7 +163,11 @@ export default function Edit({ attributes, setAttributes }) {
 											<img
 												src={imageSrc}
 												alt={imageAlt}
-												style={{ maxWidth: "100%", height: "auto", display: "block" }}
+												style={{
+													maxWidth: "100%",
+													height: "auto",
+													display: "block",
+												}}
 											/>
 										</div>
 									) : null}
@@ -161,7 +198,7 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 
-			<section {...blockProps} className="hero">
+			<section {...blockProps}>
 				<div className="wrap hero-grid">
 					<div className="hero-content">
 						<div className="eyebrow">{eyebrow}</div>
@@ -173,6 +210,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 						<div className="offer-box">
 							<div className="price">
+								{oldPrice && <span className="old-price">{oldPrice}</span>}
 								{priceValue}
 								<sub>{priceSubtext}</sub>
 							</div>
