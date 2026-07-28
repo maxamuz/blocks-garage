@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocks-garage/block-price-top",
+  "version": "0.1.0",
+  "title": "Block Price Top",
+  "category": "widgets",
+  "icon": "table-col-after",
+  "description": "Таблица с ценами на услуги автосервиса (акционный блок сверху).",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "col1Header": {
+      "type": "string",
+      "default": "Наименование услуги"
+    },
+    "col2Header": {
+      "type": "string",
+      "default": "Стоимость"
+    },
+    "col3Header": {
+      "type": "string",
+      "default": "Описание"
+    },
+    "service1Name": {
+      "type": "string",
+      "default": "Общая диагностика"
+    },
+    "service1OldPrice": {
+      "type": "string",
+      "default": "3700 ₽"
+    },
+    "service1NewPrice": {
+      "type": "string",
+      "default": "0 ₽"
+    },
+    "service1Description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".price-table tbody tr.promo:nth-child(1) .description-price",
+      "default": "<ul><li>Визуальный осмотр кузова и салона.</li><li>Проверка состояния шин и дисков.</li><li>Проверка наружного освещения.</li><li>Проверка уровня и состояния технических жидкостей.</li><li>Состояние свечей зажигания.</li><li>Приводные ремни, ролики.</li><li>Опоры ДВС, КПП, АКПП.</li><li>Состояние радиаторов (на предмет повреждений и загрязнений).</li><li>Проверка рулевого управления (на наличие люфтов и течей).</li><li>Тормозная система: износ дисков и колодок.</li><li>Проверка подвески: состояние сайлент‑блоков и шарнирных элементов.</li><li>Выпускной тракт: проверка на герметичность, состояние подвесов.</li></ul>"
+    },
+    "service2Name": {
+      "type": "string",
+      "default": "Компьютерная диагностика"
+    },
+    "service2OldPrice": {
+      "type": "string",
+      "default": "2250 ₽"
+    },
+    "service2NewPrice": {
+      "type": "string",
+      "default": "0 ₽"
+    },
+    "service2Description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".price-table tbody tr.promo:nth-child(2) .description-price",
+      "default": "Опрос систем на предмет наличия ошибок, расшифровка ошибок, сверка параметров в случае необходимости."
+    }
+  },
+  "textdomain": "blocks-garage",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

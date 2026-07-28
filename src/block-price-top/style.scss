@@ -1,0 +1,269 @@
+:root {
+	--bg: #0c0c0c;
+	--bg-panel: #161616;
+	--bg-card: #1c1c1c;
+	--bg-card-2: #212121;
+	--line: #2b2b2b;
+	--yellow: #ffc814;
+	--yellow-dark: #e0a800;
+	--white: #f4f4f2;
+	--muted: #9c9c9c;
+	--muted-2: #6f6f6f;
+	--radius: 4px;
+}
+
+.price-top-block {
+	.wrap {
+		max-width: 1320px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+}
+
+.wrap-top {
+	margin-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.price-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	background: var(--bg-card);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	overflow: hidden;
+	font-family: "Montserrat", sans-serif;
+
+	thead {
+		tr {
+			background: linear-gradient(135deg, #1b1b1b, #141414);
+		}
+
+		th {
+			font-family: "Oswald", sans-serif;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			font-size: 14px;
+			color: var(--yellow);
+			padding: 18px 20px;
+			text-align: left;
+			border-bottom: 2px solid var(--yellow);
+			background: rgba(255, 200, 20, 0.04);
+		}
+
+		th:first-child {
+			width: 28%;
+		}
+
+		th:nth-child(2) {
+			width: 18%;
+			text-align: center;
+		}
+
+		th:nth-child(3) {
+			width: 54%;
+		}
+	}
+
+	tbody {
+		tr {
+			transition: background 0.2s ease;
+
+			&:hover {
+				background: var(--bg-card-2);
+			}
+		}
+
+		tr.promo {
+			background: linear-gradient(
+				135deg,
+				rgba(255, 200, 20, 0.06),
+				rgba(255, 200, 20, 0.02)
+			);
+			border-left: 4px solid var(--yellow);
+
+			td:first-child {
+				border-left: none;
+			}
+
+			&:hover {
+				background: linear-gradient(
+					135deg,
+					rgba(255, 200, 20, 0.1),
+					rgba(255, 200, 20, 0.04)
+				);
+			}
+		}
+
+		tr + tr td {
+			border-top: 1px solid var(--line);
+		}
+
+		td {
+			padding: 18px 20px;
+			vertical-align: top;
+			color: #ddd;
+			font-size: 14.5px;
+			line-height: 1.55;
+
+			&:first-child {
+				font-family: "Oswald", sans-serif;
+				font-weight: 600;
+				font-size: 16px;
+				color: var(--white);
+				text-transform: uppercase;
+				letter-spacing: 0.3px;
+			}
+
+			&:nth-child(2) {
+				text-align: center;
+				vertical-align: middle;
+				font-family: "Oswald", sans-serif;
+				font-weight: 700;
+			}
+		}
+
+		.old-price {
+			display: block;
+			font-size: 18px;
+			font-weight: 500;
+			color: var(--muted);
+			text-decoration: line-through;
+			text-decoration-color: rgba(255, 255, 255, 0.55);
+			letter-spacing: 0.3px;
+			margin-bottom: 4px;
+		}
+
+		.new-price {
+			display: block;
+			font-size: 26px;
+			color: var(--yellow);
+			line-height: 1.1;
+		}
+
+		.description-price {
+			display: block;
+			color: #c8c8c8;
+			font-family: "Montserrat", sans-serif;
+			font-size: 14px;
+			line-height: 1.55;
+
+			ul {
+				margin: 0;
+				padding-left: 20px;
+
+				li {
+					margin-bottom: 6px;
+					position: relative;
+					list-style: none;
+					padding-left: 18px;
+
+					&::before {
+						content: "•";
+						position: absolute;
+						left: 0;
+						top: 0;
+						color: var(--yellow);
+						font-weight: 700;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.price-table {
+		display: block;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		overflow: hidden;
+
+		thead {
+			display: none;
+		}
+
+		tbody {
+			display: block;
+
+			tr {
+				display: block;
+				padding: 16px;
+				border-bottom: 1px solid var(--line);
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+
+			tr.promo {
+				border-left: 4px solid var(--yellow);
+			}
+
+			td {
+				display: block;
+				padding: 6px 0;
+				text-align: left !important;
+				border: none !important;
+
+				&::before {
+					content: attr(data-label);
+					display: block;
+					font-family: "Oswald", sans-serif;
+					font-weight: 600;
+					font-size: 12px;
+					color: var(--yellow);
+					text-transform: uppercase;
+					letter-spacing: 0.5px;
+					margin-bottom: 4px;
+				}
+
+				&:first-child::before {
+					content: "Наименование";
+				}
+
+				&:nth-child(2)::before {
+					content: "Стоимость";
+				}
+
+				&:nth-child(3)::before {
+					content: "Описание";
+				}
+			}
+
+			td:empty {
+				display: none;
+			}
+		}
+	}
+
+	.wrap-top {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 576px) {
+	.price-table tbody tr {
+		padding: 14px;
+	}
+
+	.price-table tbody td {
+		font-size: 13.5px;
+
+		&:first-child {
+			font-size: 15px;
+		}
+	}
+
+	.price-table .new-price {
+		font-size: 22px;
+	}
+}
