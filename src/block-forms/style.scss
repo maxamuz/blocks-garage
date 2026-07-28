@@ -127,6 +127,9 @@ p {
 .card.map-card {
 	border: none;
 	background: #151515;
+	&:hover {
+		border: 1px solid rgba(255, 200, 20, 0.3);
+	}
 }
 
 .map-card {
@@ -137,7 +140,7 @@ p {
 
 	.map-visual {
 		position: relative;
-		height: 170px;
+		height: 280px;
 		background: linear-gradient(
 			135deg,
 			#1c1c1c 25%,
@@ -292,7 +295,7 @@ p {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
-		margin-bottom: 14px;
+		margin-bottom: 0;
 
 		input {
 			width: 100%;
