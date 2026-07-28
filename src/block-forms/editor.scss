@@ -1,0 +1,22 @@
+.forms-block {
+	.wrap {
+		max-width: none;
+		padding: 0;
+	}
+
+	input {
+		pointer-events: none;
+	}
+
+	button.btn {
+		pointer-events: none;
+	}
+
+	.map-visual .pin {
+		animation: none;
+	}
+
+	.rich-text {
+		outline: none;
+	}
+}

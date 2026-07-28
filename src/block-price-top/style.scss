@@ -47,11 +47,11 @@
 			text-transform: uppercase;
 			letter-spacing: 0.5px;
 			font-size: 14px;
-			color: var(--yellow);
+			color: #111;
 			padding: 18px 20px;
 			text-align: left;
 			border-bottom: 2px solid var(--yellow);
-			background: rgba(255, 200, 20, 0.04);
+			background: var(--yellow);
 		}
 
 		th:first-child {
@@ -84,10 +84,6 @@
 				rgba(255, 200, 20, 0.02)
 			);
 			border-left: 4px solid var(--yellow);
-
-			td:first-child {
-				border-left: none;
-			}
 
 			&:hover {
 				background: linear-gradient(

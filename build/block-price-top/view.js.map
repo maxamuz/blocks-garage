@@ -1,0 +1,1 @@
+{"version":3,"file":"block-price-top/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAE,yBAA0B,CAAC,C","sources":["webpack://blocks-garage/./src/block-price-top/view.js"],"sourcesContent":["console.log( 'Block Price Top loaded.' );\n"],"names":["console","log"],"sourceRoot":""}

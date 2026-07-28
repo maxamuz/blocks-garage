@@ -1,0 +1,1 @@
+{"version":3,"file":"block-forms/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAE,qBAAsB,CAAC,C","sources":["webpack://blocks-garage/./src/block-forms/view.js"],"sourcesContent":["console.log( 'Block Forms loaded.' );\n"],"names":["console","log"],"sourceRoot":""}

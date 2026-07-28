@@ -1,6 +1,99 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'block-forms' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-forms',
+		'version' => '0.1.0',
+		'title' => 'Block Forms',
+		'category' => 'widgets',
+		'icon' => 'forms',
+		'description' => 'Форма записи на диагностику с виджетами рейтинга и карты.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'statementText' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.intro-statement p',
+				'default' => 'Диагностика авто в автосервисе «Гараж САО»: <b>комплексная и поузловая</b> — точно определим неисправности и стоимость ремонта.'
+			),
+			'ratingPlatform' => array(
+				'type' => 'string',
+				'default' => 'Яндекс Карты'
+			),
+			'ratingScore' => array(
+				'type' => 'string',
+				'default' => '4,9'
+			),
+			'ratingStars' => array(
+				'type' => 'string',
+				'default' => '★★★★★'
+			),
+			'ratingCount' => array(
+				'type' => 'string',
+				'default' => 'Более 900 оценок клиентов'
+			),
+			'mapLocationText' => array(
+				'type' => 'string',
+				'default' => 'Гараж САО, СВАО Москвы'
+			),
+			'mapLinkText' => array(
+				'type' => 'string',
+				'default' => 'Открыть карту →'
+			),
+			'mapLinkHref' => array(
+				'type' => 'string',
+				'default' => '#'
+			),
+			'discountBadge' => array(
+				'type' => 'string',
+				'default' => 'Скидка 5% при записи на сайте'
+			),
+			'formTitle' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.form-card h3',
+				'default' => 'Записаться на диагностику'
+			),
+			'formSubtitle' => array(
+				'type' => 'string',
+				'default' => 'Оставьте заявку — перезвоним и подберём удобное время в течение 10 минут.'
+			),
+			'formShortcode' => array(
+				'type' => 'string',
+				'default' => '[contact-form-7 id="6155b65" title="Главная форма"]'
+			),
+			'formNamePlaceholder' => array(
+				'type' => 'string',
+				'default' => 'Ваше имя'
+			),
+			'formTelPlaceholder' => array(
+				'type' => 'string',
+				'default' => '+7 (999) 999-99-99'
+			),
+			'formButtonText' => array(
+				'type' => 'string',
+				'default' => 'Отправить'
+			),
+			'consentText' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.form-card .consent',
+				'default' => 'Нажимая «Отправить», вы соглашаетесь на обработку персональных данных согласно <a href="#">политике конфиденциальности</a>.'
+			)
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-hero' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
