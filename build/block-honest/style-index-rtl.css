@@ -199,3 +199,10 @@ p {
   text-align: center;
   line-height: 1.5;
 }
+
+@media (max-width: 992px) {
+  .honest-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
