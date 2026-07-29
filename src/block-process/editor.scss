@@ -1,0 +1,11 @@
+.process {
+	.wrap {
+		max-width: none;
+		padding: 0;
+	}
+}
+
+.process-media img {
+	pointer-events: none;
+	user-select: none;
+}

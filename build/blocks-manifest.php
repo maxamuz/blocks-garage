@@ -281,5 +281,66 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'block-process' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-process',
+		'version' => '0.1.0',
+		'title' => 'Block Process',
+		'category' => 'widgets',
+		'icon' => 'editor-ol',
+		'description' => 'Блок «Как это устроено» с шагами процесса диагностики.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'imageSrc' => array(
+				'type' => 'string',
+				'default' => 'diag-process.jpg'
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => 'Компьютерная диагностика автомобиля'
+			),
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Как это устроено'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.process-text h2',
+				'default' => 'В автосервисе «Гараж САО» диагностика легковых автомобилей — это не «посмотреть и сказать», а системный процесс'
+			),
+			'step1Title' => array(
+				'type' => 'string',
+				'default' => 'Визуальный осмотр и фотофиксация'
+			),
+			'step2Title' => array(
+				'type' => 'string',
+				'default' => 'Компьютерная диагностика электронных систем'
+			),
+			'step3Title' => array(
+				'type' => 'string',
+				'default' => 'Поузловая проверка: подвеска, тормозная система, рулевое управление, трансмиссия и т. д.'
+			),
+			'step4Title' => array(
+				'type' => 'string',
+				'default' => 'Оценка степени износа деталей'
+			),
+			'step5Title' => array(
+				'type' => 'string',
+				'default' => 'Формирование полного отчёта и расчёт стоимости ремонта (если требуется).'
+			)
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
 	)
 );

@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-garage/block-process",
+	"version": "0.1.0",
+	"title": "Block Process",
+	"category": "widgets",
+	"icon": "editor-ol",
+	"description": "Блок «Как это устроено» с шагами процесса диагностики.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"imageSrc": {
+			"type": "string",
+			"default": "diag-process.jpg"
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": "Компьютерная диагностика автомобиля"
+		},
+		"eyebrow": {
+			"type": "string",
+			"default": "Как это устроено"
+		},
+		"heading": {
+			"type": "string",
+			"source": "html",
+			"selector": ".process-text h2",
+			"default": "В автосервисе «Гараж САО» диагностика легковых автомобилей — это не «посмотреть и сказать», а системный процесс"
+		},
+		"step1Title": {
+			"type": "string",
+			"default": "Визуальный осмотр и фотофиксация"
+		},
+		"step2Title": {
+			"type": "string",
+			"default": "Компьютерная диагностика электронных систем"
+		},
+		"step3Title": {
+			"type": "string",
+			"default": "Поузловая проверка: подвеска, тормозная система, рулевое управление, трансмиссия и т. д."
+		},
+		"step4Title": {
+			"type": "string",
+			"default": "Оценка степени износа деталей"
+		},
+		"step5Title": {
+			"type": "string",
+			"default": "Формирование полного отчёта и расчёт стоимости ремонта (если требуется)."
+		}
+	},
+	"textdomain": "blocks-garage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
