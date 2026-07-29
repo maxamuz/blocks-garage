@@ -211,6 +211,83 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-honest' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-honest',
+		'version' => '0.1.0',
+		'title' => 'Block Honest Work',
+		'category' => 'widgets',
+		'icon' => 'shield',
+		'description' => 'Блок с описанием подхода: сначала диагностика и смета, потом ремонт.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Наш подход'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => 'h2',
+				'default' => 'Работаем честно: сначала диагностика и смета — потом ремонт'
+			),
+			'lede' => array(
+				'type' => 'string',
+				'default' => 'Такой подход позволяет выявить скрытые проблемы и спланировать ремонт без спешки и лишних трат. Принимаем авто любых годов выпуска и с любым пробегом — состояние не влияет на качество диагностики.'
+			),
+			'item1Title' => array(
+				'type' => 'string',
+				'default' => 'Сначала диагностика и смета'
+			),
+			'item1Text' => array(
+				'type' => 'string',
+				'default' => 'Вы точно знаете, что не так с автомобилем и сколько будет стоить ремонт, ещё до начала работ.'
+			),
+			'item2Title' => array(
+				'type' => 'string',
+				'default' => 'Диагностика бесплатно при ремонте'
+			),
+			'item2Text' => array(
+				'type' => 'string',
+				'default' => 'Если решите чинить автомобиль у нас — стоимость диагностики не входит в счёт.'
+			),
+			'item3Title' => array(
+				'type' => 'string',
+				'default' => 'Никаких лишних работ'
+			),
+			'item3Text' => array(
+				'type' => 'string',
+				'default' => 'Предлагаем ремонт только того, что реально требует внимания — без навязанных услуг.'
+			),
+			'item4Title' => array(
+				'type' => 'string',
+				'default' => 'Эвакуатор'
+			),
+			'item4Text' => array(
+				'type' => 'string',
+				'default' => 'В случае необходимости, организуем доставку вашего автомобиля к нам в сервис.'
+			),
+			'item5Title' => array(
+				'type' => 'string',
+				'default' => 'Ценим время'
+			),
+			'item5Text' => array(
+				'type' => 'string',
+				'default' => 'Знаем как важно вовремя получить автомобиль в четко обозначенный срок.'
+			)
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-price-top' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

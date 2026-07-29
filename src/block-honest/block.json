@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-garage/block-honest",
+	"version": "0.1.0",
+	"title": "Block Honest Work",
+	"category": "widgets",
+	"icon": "shield",
+	"description": "Блок с описанием подхода: сначала диагностика и смета, потом ремонт.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Наш подход" },
+		"heading": { "type": "string", "source": "html", "selector": "h2", "default": "Работаем честно: сначала диагностика и смета — потом ремонт" },
+		"lede": { "type": "string", "default": "Такой подход позволяет выявить скрытые проблемы и спланировать ремонт без спешки и лишних трат. Принимаем авто любых годов выпуска и с любым пробегом — состояние не влияет на качество диагностики." },
+		"item1Title": { "type": "string", "default": "Сначала диагностика и смета" },
+		"item1Text": { "type": "string", "default": "Вы точно знаете, что не так с автомобилем и сколько будет стоить ремонт, ещё до начала работ." },
+		"item2Title": { "type": "string", "default": "Диагностика бесплатно при ремонте" },
+		"item2Text": { "type": "string", "default": "Если решите чинить автомобиль у нас — стоимость диагностики не входит в счёт." },
+		"item3Title": { "type": "string", "default": "Никаких лишних работ" },
+		"item3Text": { "type": "string", "default": "Предлагаем ремонт только того, что реально требует внимания — без навязанных услуг." },
+		"item4Title": { "type": "string", "default": "Эвакуатор" },
+		"item4Text": { "type": "string", "default": "В случае необходимости, организуем доставку вашего автомобиля к нам в сервис." },
+		"item5Title": { "type": "string", "default": "Ценим время" },
+		"item5Text": { "type": "string", "default": "Знаем как важно вовремя получить автомобиль в четко обозначенный срок." }
+	},
+	"textdomain": "blocks-garage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
