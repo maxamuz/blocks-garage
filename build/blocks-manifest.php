@@ -39,9 +39,33 @@ return array(
 				'type' => 'string',
 				'default' => 'Более 900 оценок клиентов'
 			),
+			'yandexWidgetIframeSrc' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'yandexWidgetLinkHref' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'yandexWidgetLinkText' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'yandexWidgetHeight' => array(
+				'type' => 'number',
+				'default' => 800
+			),
 			'mapLocationText' => array(
 				'type' => 'string',
 				'default' => 'Гараж САО, СВАО Москвы'
+			),
+			'mapImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'mapImageAlt' => array(
+				'type' => 'string',
+				'default' => 'Карта'
 			),
 			'mapLinkText' => array(
 				'type' => 'string',

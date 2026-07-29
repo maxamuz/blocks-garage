@@ -16,6 +16,11 @@
 		animation: none;
 	}
 
+	.map-visual img {
+		pointer-events: none;
+		user-select: none;
+	}
+
 	.rich-text {
 		outline: none;
 	}

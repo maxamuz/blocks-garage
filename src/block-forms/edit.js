@@ -2,10 +2,17 @@ import { __ } from "@wordpress/i18n";
 import {
 	useBlockProps,
 	InspectorControls,
+	MediaUpload,
+	MediaUploadCheck,
 	RichText,
 	BlockControls,
 } from "@wordpress/block-editor";
-import { PanelBody, TextControl, TextareaControl } from "@wordpress/components";
+import {
+	PanelBody,
+	TextControl,
+	TextareaControl,
+	Button,
+} from "@wordpress/components";
 import "./editor.scss";
 
 const STATEMENT_ALLOWED_FORMATS = [
@@ -24,7 +31,13 @@ export default function Edit({ attributes, setAttributes }) {
 		ratingScore,
 		ratingStars,
 		ratingCount,
+		yandexWidgetIframeSrc,
+		yandexWidgetLinkHref,
+		yandexWidgetLinkText,
+		yandexWidgetHeight,
 		mapLocationText,
+		mapImageUrl,
+		mapImageAlt,
 		mapLinkText,
 		mapLinkHref,
 		discountBadge,
@@ -60,6 +73,40 @@ export default function Edit({ attributes, setAttributes }) {
 					initialOpen={false}
 				>
 					<TextControl
+						label={__("Iframe src (Яндекс виджет)", "blocks-garage")}
+						help={__(
+							"Например: https://yandex.ru/maps-reviews-widget/.....?comments",
+							"blocks-garage",
+						)}
+						value={yandexWidgetIframeSrc}
+						onChange={(val) => setAttributes({ yandexWidgetIframeSrc: val })}
+					/>
+					<TextControl
+						label={__("Ссылка под виджетом", "blocks-garage")}
+						help={__(
+							"Например: https://yandex.ru/maps/org/.../",
+							"blocks-garage",
+						)}
+						value={yandexWidgetLinkHref}
+						onChange={(val) => setAttributes({ yandexWidgetLinkHref: val })}
+					/>
+					<TextControl
+						label={__("Текст ссылки под виджетом", "blocks-garage")}
+						value={yandexWidgetLinkText}
+						onChange={(val) => setAttributes({ yandexWidgetLinkText: val })}
+					/>
+					<TextControl
+						label={__("Высота виджета (px)", "blocks-garage")}
+						type="number"
+						value={yandexWidgetHeight}
+						onChange={(val) =>
+							setAttributes({ yandexWidgetHeight: Number(val || 0) })
+						}
+					/>
+					<div
+						style={{ margin: "12px 0", height: "1px", background: "#eee" }}
+					/>
+					<TextControl
 						label={__("Платформа", "blocks-garage")}
 						value={ratingPlatform}
 						onChange={(val) => setAttributes({ ratingPlatform: val })}
@@ -85,6 +132,46 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__("Виджет карты", "blocks-garage")}
 					initialOpen={false}
 				>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={(media) => {
+								setAttributes({
+									mapImageUrl: media.url,
+									mapImageAlt: media.alt || mapImageAlt,
+								});
+							}}
+							allowedTypes={["image"]}
+							value={mapImageUrl}
+							render={({ open }) => (
+								<div style={{ marginBottom: "12px" }}>
+									{mapImageUrl ? (
+										<div style={{ marginBottom: "8px" }}>
+											<img
+												src={mapImageUrl}
+												alt={mapImageAlt}
+												style={{
+													maxWidth: "100%",
+													height: "auto",
+													display: "block",
+													borderRadius: "4px",
+												}}
+											/>
+										</div>
+									) : null}
+									<Button variant="secondary" onClick={open}>
+										{mapImageUrl
+											? __("Заменить изображение карты", "blocks-garage")
+											: __("Выбрать изображение карты", "blocks-garage")}
+									</Button>
+								</div>
+							)}
+						/>
+					</MediaUploadCheck>
+					<TextControl
+						label={__("Alt-текст изображения карты", "blocks-garage")}
+						value={mapImageAlt}
+						onChange={(val) => setAttributes({ mapImageAlt: val })}
+					/>
 					<TextControl
 						label={__("Текст локации", "blocks-garage")}
 						value={mapLocationText}
@@ -150,13 +237,65 @@ export default function Edit({ attributes, setAttributes }) {
 									className="card rating-card"
 									style={{ flex: 1, minWidth: 240 }}
 								>
-									<div>
-										<div className="platform">{ratingPlatform}</div>
-										<div className="score">
-											{ratingScore} <span className="stars">{ratingStars}</span>
+									{yandexWidgetIframeSrc ? (
+										<div
+											style={{
+												width: "100%",
+												height: yandexWidgetHeight || 800,
+												overflow: "hidden",
+												position: "relative",
+											}}
+										>
+											<iframe
+												title="Yandex Maps Reviews"
+												style={{
+													width: "100%",
+													height: "100%",
+													border: "1px solid #e6e6e6",
+													borderRadius: "8px",
+													boxSizing: "border-box",
+												}}
+												src={yandexWidgetIframeSrc}
+											/>
+											{yandexWidgetLinkHref ? (
+												<a
+													href={yandexWidgetLinkHref}
+													target="_blank"
+													rel="noreferrer"
+													style={{
+														boxSizing: "border-box",
+														textDecoration: "none",
+														color: "#b3b3b3",
+														fontSize: "10px",
+														fontFamily: "YS Text, sans-serif",
+														position: "absolute",
+														bottom: "8px",
+														width: "100%",
+														textAlign: "center",
+														left: 0,
+														overflow: "hidden",
+														textOverflow: "ellipsis",
+														display: "block",
+														maxHeight: "14px",
+														whiteSpace: "nowrap",
+														padding: "0 16px",
+													}}
+												>
+													{yandexWidgetLinkText ||
+														__("Открыть в Яндекс Картах", "blocks-garage")}
+												</a>
+											) : null}
 										</div>
-										<div className="count">{ratingCount}</div>
-									</div>
+									) : (
+										<div>
+											<div className="platform">{ratingPlatform}</div>
+											<div className="score">
+												{ratingScore}{" "}
+												<span className="stars">{ratingStars}</span>
+											</div>
+											<div className="count">{ratingCount}</div>
+										</div>
+									)}
 								</div>
 
 								<div
@@ -164,6 +303,9 @@ export default function Edit({ attributes, setAttributes }) {
 									style={{ flex: 1, minWidth: 240, padding: 0 }}
 								>
 									<div className="map-visual">
+										{mapImageUrl ? (
+											<img src={mapImageUrl} alt={mapImageAlt} />
+										) : null}
 										<div className="pin">
 											<div className="pin-dot"></div>
 										</div>

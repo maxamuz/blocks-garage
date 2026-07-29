@@ -38,7 +38,13 @@ function Edit({
     ratingScore,
     ratingStars,
     ratingCount,
+    yandexWidgetIframeSrc,
+    yandexWidgetLinkHref,
+    yandexWidgetLinkText,
+    yandexWidgetHeight,
     mapLocationText,
+    mapImageUrl,
+    mapImageAlt,
     mapLinkText,
     mapLinkHref,
     discountBadge,
@@ -69,6 +75,39 @@ function Edit({
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Виджет рейтинга", "blocks-garage"),
         initialOpen: false,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Iframe src (Яндекс виджет)", "blocks-garage"),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Например: https://yandex.ru/maps-reviews-widget/.....?comments", "blocks-garage"),
+          value: yandexWidgetIframeSrc,
+          onChange: val => setAttributes({
+            yandexWidgetIframeSrc: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Ссылка под виджетом", "blocks-garage"),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Например: https://yandex.ru/maps/org/.../", "blocks-garage"),
+          value: yandexWidgetLinkHref,
+          onChange: val => setAttributes({
+            yandexWidgetLinkHref: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст ссылки под виджетом", "blocks-garage"),
+          value: yandexWidgetLinkText,
+          onChange: val => setAttributes({
+            yandexWidgetLinkText: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Высота виджета (px)", "blocks-garage"),
+          type: "number",
+          value: yandexWidgetHeight,
+          onChange: val => setAttributes({
+            yandexWidgetHeight: Number(val || 0)
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          style: {
+            margin: "12px 0",
+            height: "1px",
+            background: "#eee"
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Платформа", "blocks-garage"),
           value: ratingPlatform,
           onChange: val => setAttributes({
@@ -96,7 +135,50 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Виджет карты", "blocks-garage"),
         initialOpen: false,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+            onSelect: media => {
+              setAttributes({
+                mapImageUrl: media.url,
+                mapImageAlt: media.alt || mapImageAlt
+              });
+            },
+            allowedTypes: ["image"],
+            value: mapImageUrl,
+            render: ({
+              open
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              style: {
+                marginBottom: "12px"
+              },
+              children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                style: {
+                  marginBottom: "8px"
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                  src: mapImageUrl,
+                  alt: mapImageAlt,
+                  style: {
+                    maxWidth: "100%",
+                    height: "auto",
+                    display: "block",
+                    borderRadius: "4px"
+                  }
+                })
+              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                variant: "secondary",
+                onClick: open,
+                children: mapImageUrl ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Заменить изображение карты", "blocks-garage") : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Выбрать изображение карты", "blocks-garage")
+              })]
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Alt-текст изображения карты", "blocks-garage"),
+          value: mapImageAlt,
+          onChange: val => setAttributes({
+            mapImageAlt: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст локации", "blocks-garage"),
           value: mapLocationText,
           onChange: val => setAttributes({
@@ -176,7 +258,48 @@ function Edit({
                   flex: 1,
                   minWidth: 240
                 },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                children: yandexWidgetIframeSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  style: {
+                    width: "100%",
+                    height: yandexWidgetHeight || 800,
+                    overflow: "hidden",
+                    position: "relative"
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("iframe", {
+                    title: "Yandex Maps Reviews",
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      border: "1px solid #e6e6e6",
+                      borderRadius: "8px",
+                      boxSizing: "border-box"
+                    },
+                    src: yandexWidgetIframeSrc
+                  }), yandexWidgetLinkHref ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                    href: yandexWidgetLinkHref,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    style: {
+                      boxSizing: "border-box",
+                      textDecoration: "none",
+                      color: "#b3b3b3",
+                      fontSize: "10px",
+                      fontFamily: "YS Text, sans-serif",
+                      position: "absolute",
+                      bottom: "8px",
+                      width: "100%",
+                      textAlign: "center",
+                      left: 0,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      display: "block",
+                      maxHeight: "14px",
+                      whiteSpace: "nowrap",
+                      padding: "0 16px"
+                    },
+                    children: yandexWidgetLinkText || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Открыть в Яндекс Картах", "blocks-garage")
+                  }) : null]
+                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                     className: "platform",
                     children: ratingPlatform
@@ -198,14 +321,17 @@ function Edit({
                   minWidth: 240,
                   padding: 0
                 },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "map-visual",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                  children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                    src: mapImageUrl,
+                    alt: mapImageAlt
+                  }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                     className: "pin",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                       className: "pin-dot"
                     })
-                  })
+                  })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "map-info",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
@@ -315,7 +441,13 @@ function save({
     ratingScore,
     ratingStars,
     ratingCount,
+    yandexWidgetIframeSrc,
+    yandexWidgetLinkHref,
+    yandexWidgetLinkText,
+    yandexWidgetHeight,
     mapLocationText,
+    mapImageUrl,
+    mapImageAlt,
     mapLinkText,
     mapLinkHref,
     discountBadge,
@@ -359,7 +491,48 @@ function save({
                 flex: 1,
                 minWidth: 240
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: yandexWidgetIframeSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                style: {
+                  width: "100%",
+                  height: yandexWidgetHeight || 800,
+                  overflow: "hidden",
+                  position: "relative"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
+                  title: "Yandex Maps Reviews",
+                  style: {
+                    width: "100%",
+                    height: "100%",
+                    border: "1px solid #e6e6e6",
+                    borderRadius: "8px",
+                    boxSizing: "border-box"
+                  },
+                  src: yandexWidgetIframeSrc
+                }), yandexWidgetLinkHref ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                  href: yandexWidgetLinkHref,
+                  target: "_blank",
+                  rel: "noreferrer",
+                  style: {
+                    boxSizing: "border-box",
+                    textDecoration: "none",
+                    color: "#b3b3b3",
+                    fontSize: "10px",
+                    fontFamily: "YS Text, sans-serif",
+                    position: "absolute",
+                    bottom: "8px",
+                    width: "100%",
+                    textAlign: "center",
+                    left: 0,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    display: "block",
+                    maxHeight: "14px",
+                    whiteSpace: "nowrap",
+                    padding: "0 16px"
+                  },
+                  children: yandexWidgetLinkText || "Открыть в Яндекс Картах"
+                }) : null]
+              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                   className: "platform",
                   children: ratingPlatform
@@ -381,14 +554,17 @@ function save({
                 minWidth: 240,
                 padding: 0
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "map-visual",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                  src: mapImageUrl,
+                  alt: mapImageAlt
+                }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                   className: "pin",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                     className: "pin-dot"
                   })
-                })
+                })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
                 className: "map-info",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
@@ -509,7 +685,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-garage/block-forms","version":"0.1.0","title":"Block Forms","category":"widgets","icon":"forms","description":"Форма записи на диагностику с виджетами рейтинга и карты.","example":{},"supports":{"html":false},"attributes":{"statementText":{"type":"string","source":"html","selector":".intro-statement p","default":"Диагностика авто в автосервисе «Гараж САО»: <b>комплексная и поузловая</b> — точно определим неисправности и стоимость ремонта."},"ratingPlatform":{"type":"string","default":"Яндекс Карты"},"ratingScore":{"type":"string","default":"4,9"},"ratingStars":{"type":"string","default":"★★★★★"},"ratingCount":{"type":"string","default":"Более 900 оценок клиентов"},"mapLocationText":{"type":"string","default":"Гараж САО, СВАО Москвы"},"mapLinkText":{"type":"string","default":"Открыть карту →"},"mapLinkHref":{"type":"string","default":"#"},"discountBadge":{"type":"string","default":"Скидка 5% при записи на сайте"},"formTitle":{"type":"string","source":"html","selector":".form-card h3","default":"Записаться на диагностику"},"formSubtitle":{"type":"string","default":"Оставьте заявку — перезвоним и подберём удобное время в течение 10 минут."},"formShortcode":{"type":"string","default":"[contact-form-7 id=\\"6155b65\\" title=\\"Главная форма\\"]"},"formNamePlaceholder":{"type":"string","default":"Ваше имя"},"formTelPlaceholder":{"type":"string","default":"+7 (999) 999-99-99"},"formButtonText":{"type":"string","default":"Отправить"},"consentText":{"type":"string","source":"html","selector":".form-card .consent","default":"Нажимая «Отправить», вы соглашаетесь на обработку персональных данных согласно <a href=\\"#\\">политике конфиденциальности</a>."}},"textdomain":"blocks-garage","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-garage/block-forms","version":"0.1.0","title":"Block Forms","category":"widgets","icon":"forms","description":"Форма записи на диагностику с виджетами рейтинга и карты.","example":{},"supports":{"html":false},"attributes":{"statementText":{"type":"string","source":"html","selector":".intro-statement p","default":"Диагностика авто в автосервисе «Гараж САО»: <b>комплексная и поузловая</b> — точно определим неисправности и стоимость ремонта."},"ratingPlatform":{"type":"string","default":"Яндекс Карты"},"ratingScore":{"type":"string","default":"4,9"},"ratingStars":{"type":"string","default":"★★★★★"},"ratingCount":{"type":"string","default":"Более 900 оценок клиентов"},"yandexWidgetIframeSrc":{"type":"string","default":""},"yandexWidgetLinkHref":{"type":"string","default":""},"yandexWidgetLinkText":{"type":"string","default":""},"yandexWidgetHeight":{"type":"number","default":800},"mapLocationText":{"type":"string","default":"Гараж САО, СВАО Москвы"},"mapImageUrl":{"type":"string","default":""},"mapImageAlt":{"type":"string","default":"Карта"},"mapLinkText":{"type":"string","default":"Открыть карту →"},"mapLinkHref":{"type":"string","default":"#"},"discountBadge":{"type":"string","default":"Скидка 5% при записи на сайте"},"formTitle":{"type":"string","source":"html","selector":".form-card h3","default":"Записаться на диагностику"},"formSubtitle":{"type":"string","default":"Оставьте заявку — перезвоним и подберём удобное время в течение 10 минут."},"formShortcode":{"type":"string","default":"[contact-form-7 id=\\"6155b65\\" title=\\"Главная форма\\"]"},"formNamePlaceholder":{"type":"string","default":"Ваше имя"},"formTelPlaceholder":{"type":"string","default":"+7 (999) 999-99-99"},"formButtonText":{"type":"string","default":"Отправить"},"consentText":{"type":"string","source":"html","selector":".form-card .consent","default":"Нажимая «Отправить», вы соглашаетесь на обработку персональных данных согласно <a href=\\"#\\">политике конфиденциальности</a>."}},"textdomain":"blocks-garage","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 
