@@ -1,1 +1,24 @@
-.forms-block .wrap{max-width:none;padding:0}.forms-block button.btn,.forms-block input{pointer-events:none}.forms-block .map-visual .pin{animation:none}.forms-block .map-visual img{pointer-events:none;-webkit-user-select:none;user-select:none}.forms-block .rich-text{outline:none}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-forms/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+.forms-block .wrap {
+  max-width: none;
+  padding: 0;
+}
+.forms-block input {
+  pointer-events: none;
+}
+.forms-block button.btn {
+  pointer-events: none;
+}
+.forms-block .map-visual .pin {
+  animation: none;
+}
+.forms-block .map-visual img {
+  pointer-events: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.forms-block .rich-text {
+  outline: none;
+}
