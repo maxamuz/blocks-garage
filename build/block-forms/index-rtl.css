@@ -4,6 +4,7 @@
 .forms-block .wrap {
   max-width: none;
   padding: 0;
+  background: #909090;
 }
 .forms-block input {
   pointer-events: none;

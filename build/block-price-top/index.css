@@ -4,6 +4,7 @@
 .price-top-block .wrap {
   max-width: none;
   padding: 0;
+  background: #909090;
 }
 .price-top-block .price-table .wp-block {
   max-width: none;

@@ -211,6 +211,70 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-honest' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-honest',
+		'version' => '0.1.0',
+		'title' => 'Block Honest',
+		'category' => 'widgets',
+		'icon' => 'shield',
+		'description' => 'Блок «Наш подход» с карточками (репитер).',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Наш подход'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.section-head h2',
+				'default' => 'Работаем честно: сначала диагностика и смета — потом ремонт'
+			),
+			'lede' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.lede',
+				'default' => 'Такой подход позволяет выявить скрытые проблемы и спланировать ремонт без спешки и лишних трат. Принимаем авто любых годов выпуска и с любым пробегом — состояние не влияет на качество диагностики.'
+			),
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Сначала диагностика и смета',
+						'text' => 'Вы точно знаете, что не так с автомобилем и сколько будет стоить ремонт, ещё до начала работ.'
+					),
+					array(
+						'title' => 'Диагностика бесплатно при ремонте',
+						'text' => 'Если решите чинить автомобиль у нас — стоимость диагностики не входит в счёт.'
+					),
+					array(
+						'title' => 'Никаких лишних работ',
+						'text' => 'Предлагаем ремонт только того, что реально требует внимания — без навязанных услуг.'
+					),
+					array(
+						'title' => 'Эвакуатор',
+						'text' => 'В случае необходимости, организуем доставку вашего автомобиля к нам в сервис.'
+					),
+					array(
+						'title' => 'Ценим время',
+						'text' => 'знаем как важно вовремя получить автомобиль в четко обозначенный срок.'
+					)
+				)
+			)
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-price-top' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
