@@ -1,1 +1,879 @@
-(()=>{"use strict";var e={926(){const e=window.wp.blocks,a=window.wp.i18n,s=window.wp.blockEditor,l=window.wp.components,t=window.ReactJSXRuntime,i=["core/bold","core/italic","core/link","core/text-color"],r=["core/bold","core/italic","core/link"],n=JSON.parse('{"UU":"blocks-garage/block-forms"}');(0,e.registerBlockType)(n.UU,{edit:function({attributes:e,setAttributes:n}){const{statementText:o,ratingPlatform:c,ratingScore:d,ratingStars:x,ratingCount:g,yandexWidgetIframeSrc:h,yandexWidgetLinkHref:m,yandexWidgetLinkText:p,yandexWidgetHeight:b,mapLocationText:j,mapImageUrl:v,mapImageAlt:f,mapLinkText:u,mapLinkHref:k,discountBadge:_,formTitle:y,formSubtitle:w,formShortcode:N,consentText:T}=e,C=(0,s.useBlockProps)({className:"forms-block"});return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(s.BlockControls,{group:"inline"}),(0,t.jsxs)(s.InspectorControls,{children:[(0,t.jsx)(l.PanelBody,{title:(0,a.__)("Вступительный текст","blocks-garage"),initialOpen:!1,children:(0,t.jsx)("p",{style:{margin:"0 0 8px",fontSize:"12px",color:"#757575"},children:(0,a.__)("Текст редактируется прямо в блоке. Выделите слово и сделайте его жирным (кнопка B).","blocks-garage")})}),(0,t.jsxs)(l.PanelBody,{title:(0,a.__)("Виджет рейтинга","blocks-garage"),initialOpen:!1,children:[(0,t.jsx)(l.TextControl,{label:(0,a.__)("Iframe src (Яндекс виджет)","blocks-garage"),help:(0,a.__)("Например: https://yandex.ru/maps-reviews-widget/.....?comments","blocks-garage"),value:h,onChange:e=>n({yandexWidgetIframeSrc:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Ссылка под виджетом","blocks-garage"),help:(0,a.__)("Например: https://yandex.ru/maps/org/.../","blocks-garage"),value:m,onChange:e=>n({yandexWidgetLinkHref:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Текст ссылки под виджетом","blocks-garage"),value:p,onChange:e=>n({yandexWidgetLinkText:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Высота виджета (px)","blocks-garage"),type:"number",value:b,onChange:e=>n({yandexWidgetHeight:Number(e||0)})}),(0,t.jsx)("div",{style:{margin:"12px 0",height:"1px",background:"#eee"}}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Платформа","blocks-garage"),value:c,onChange:e=>n({ratingPlatform:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Оценка (число)","blocks-garage"),value:d,onChange:e=>n({ratingScore:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Звёзды (символы)","blocks-garage"),value:x,onChange:e=>n({ratingStars:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Количество оценок","blocks-garage"),value:g,onChange:e=>n({ratingCount:e})})]}),(0,t.jsxs)(l.PanelBody,{title:(0,a.__)("Виджет карты","blocks-garage"),initialOpen:!1,children:[(0,t.jsx)(s.MediaUploadCheck,{children:(0,t.jsx)(s.MediaUpload,{onSelect:e=>{n({mapImageUrl:e.url,mapImageAlt:e.alt||f})},allowedTypes:["image"],value:v,render:({open:e})=>(0,t.jsxs)("div",{style:{marginBottom:"12px"},children:[v?(0,t.jsx)("div",{style:{marginBottom:"8px"},children:(0,t.jsx)("img",{src:v,alt:f,style:{maxWidth:"100%",height:"auto",display:"block",borderRadius:"4px"}})}):null,(0,t.jsx)(l.Button,{variant:"secondary",onClick:e,children:v?(0,a.__)("Заменить изображение карты","blocks-garage"):(0,a.__)("Выбрать изображение карты","blocks-garage")})]})})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Alt-текст изображения карты","blocks-garage"),value:f,onChange:e=>n({mapImageAlt:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Текст локации","blocks-garage"),value:j,onChange:e=>n({mapLocationText:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("Текст ссылки","blocks-garage"),value:u,onChange:e=>n({mapLinkText:e})}),(0,t.jsx)(l.TextControl,{label:(0,a.__)("URL ссылки","blocks-garage"),value:k,onChange:e=>n({mapLinkHref:e})})]}),(0,t.jsxs)(l.PanelBody,{title:(0,a.__)("Форма заявки","blocks-garage"),initialOpen:!0,children:[(0,t.jsx)(l.TextControl,{label:(0,a.__)("Бейдж скидки","blocks-garage"),value:_,onChange:e=>n({discountBadge:e})}),(0,t.jsx)(l.TextareaControl,{label:(0,a.__)("Подзаголовок формы","blocks-garage"),value:w,onChange:e=>n({formSubtitle:e})}),(0,t.jsx)(l.TextareaControl,{label:(0,a.__)("Шорткод Contact Form 7","blocks-garage"),help:(0,a.__)('Вставьте шорткод вида: [contact-form-7 id="123" title="..."]',"blocks-garage"),value:N,onChange:e=>n({formShortcode:e})})]})]}),(0,t.jsx)("section",{...C,children:(0,t.jsxs)("section",{className:"intro-forms",style:{paddingTop:0},children:[(0,t.jsx)("div",{className:"intro-statement wrap",children:(0,t.jsx)(s.RichText,{tagName:"p",value:o,onChange:e=>n({statementText:e}),allowedFormats:i,preserveWhiteSpace:!0})}),(0,t.jsx)("div",{className:"wrap",children:(0,t.jsxs)("div",{className:"hero-grid",style:{alignItems:"stretch"},children:[(0,t.jsxs)("div",{className:"side",style:{flexDirection:"row",flexWrap:"wrap"},children:[(0,t.jsx)("div",{className:"card rating-card",style:{flex:1,minWidth:240},children:h?(0,t.jsxs)("div",{style:{width:"100%",height:b||800,overflow:"hidden",position:"relative"},children:[(0,t.jsx)("iframe",{title:"Yandex Maps Reviews",style:{width:"100%",height:"100%",border:"1px solid #e6e6e6",borderRadius:"8px",boxSizing:"border-box"},src:h}),m?(0,t.jsx)("a",{href:m,target:"_blank",rel:"noreferrer",style:{boxSizing:"border-box",textDecoration:"none",color:"#b3b3b3",fontSize:"10px",fontFamily:"YS Text, sans-serif",position:"absolute",bottom:"8px",width:"100%",textAlign:"center",left:0,overflow:"hidden",textOverflow:"ellipsis",display:"block",maxHeight:"14px",whiteSpace:"nowrap",padding:"0 16px"},children:p||(0,a.__)("Открыть в Яндекс Картах","blocks-garage")}):null]}):(0,t.jsxs)("div",{children:[(0,t.jsx)("div",{className:"platform",children:c}),(0,t.jsxs)("div",{className:"score",children:[d," ",(0,t.jsx)("span",{className:"stars",children:x})]}),(0,t.jsx)("div",{className:"count",children:g})]})}),(0,t.jsxs)("div",{className:"card map-card",style:{flex:1,minWidth:240,padding:0},children:[(0,t.jsxs)("div",{className:"map-visual",children:[v?(0,t.jsx)("img",{src:v,alt:f}):null,(0,t.jsx)("div",{className:"pin",children:(0,t.jsx)("div",{className:"pin-dot"})})]}),(0,t.jsxs)("div",{className:"map-info",children:[(0,t.jsx)("span",{children:j}),(0,t.jsx)("a",{href:k,children:u})]})]})]}),(0,t.jsxs)("div",{className:"card form-card",id:"lead-mini",children:[(0,t.jsx)("span",{className:"discount",children:_}),(0,t.jsx)(s.RichText,{tagName:"h3",value:y,onChange:e=>n({formTitle:e}),allowedFormats:[]}),(0,t.jsx)("p",{className:"sub",children:w}),(0,t.jsx)("div",{style:{padding:"12px 14px",border:"1px dashed #555",borderRadius:"4px",color:"#c9c9c9",background:"#101010",fontFamily:"monospace",fontSize:"12px",whiteSpace:"pre-wrap"},children:N||'[contact-form-7 id="123" title="..."]'}),(0,t.jsx)("p",{className:"consent",children:(0,t.jsx)(s.RichText,{value:T,onChange:e=>n({consentText:e}),allowedFormats:r,preserveWhiteSpace:!0})})]})]})})]})})]})},save:function({attributes:e}){const{statementText:a,ratingPlatform:l,ratingScore:i,ratingStars:r,ratingCount:n,yandexWidgetIframeSrc:o,yandexWidgetLinkHref:c,yandexWidgetLinkText:d,yandexWidgetHeight:x,mapLocationText:g,mapImageUrl:h,mapImageAlt:m,mapLinkText:p,mapLinkHref:b,discountBadge:j,formTitle:v,formSubtitle:f,formShortcode:u,consentText:k}=e,_=s.useBlockProps.save({className:"forms-block"});return(0,t.jsx)("section",{..._,children:(0,t.jsxs)("section",{className:"intro-forms",style:{paddingTop:0},children:[(0,t.jsx)("div",{className:"intro-statement wrap",children:(0,t.jsx)(s.RichText.Content,{tagName:"p",value:a})}),(0,t.jsx)("div",{className:"wrap",children:(0,t.jsxs)("div",{className:"hero-grid",style:{alignItems:"stretch"},children:[(0,t.jsxs)("div",{className:"side",style:{flexDirection:"row",flexWrap:"wrap"},children:[(0,t.jsx)("div",{className:"card rating-card",style:{flex:1,minWidth:240},children:o?(0,t.jsxs)("div",{style:{width:"100%",height:x||800,overflow:"hidden",position:"relative"},children:[(0,t.jsx)("iframe",{title:"Yandex Maps Reviews",style:{width:"100%",height:"100%",border:"1px solid #e6e6e6",borderRadius:"8px",boxSizing:"border-box"},src:o}),c?(0,t.jsx)("a",{href:c,target:"_blank",rel:"noreferrer",style:{boxSizing:"border-box",textDecoration:"none",color:"#b3b3b3",fontSize:"10px",fontFamily:"YS Text, sans-serif",position:"absolute",bottom:"8px",width:"100%",textAlign:"center",left:0,overflow:"hidden",textOverflow:"ellipsis",display:"block",maxHeight:"14px",whiteSpace:"nowrap",padding:"0 16px"},children:d||"Открыть в Яндекс Картах"}):null]}):(0,t.jsxs)("div",{children:[(0,t.jsx)("div",{className:"platform",children:l}),(0,t.jsxs)("div",{className:"score",children:[i," ",(0,t.jsx)("span",{className:"stars",children:r})]}),(0,t.jsx)("div",{className:"count",children:n})]})}),(0,t.jsxs)("div",{className:"card map-card",style:{flex:1,minWidth:240,padding:0},children:[(0,t.jsxs)("div",{className:"map-visual",children:[h?(0,t.jsx)("img",{src:h,alt:m}):null,(0,t.jsx)("div",{className:"pin",children:(0,t.jsx)("div",{className:"pin-dot"})})]}),(0,t.jsxs)("div",{className:"map-info",children:[(0,t.jsx)("span",{children:g}),(0,t.jsx)("a",{href:b,children:p})]})]})]}),(0,t.jsxs)("div",{className:"card form-card",id:"lead-mini",children:[(0,t.jsx)("span",{className:"discount",children:j}),(0,t.jsx)(s.RichText.Content,{tagName:"h3",value:v}),(0,t.jsx)("p",{className:"sub",children:f}),(0,t.jsx)("div",{className:"cf7-form",children:u}),(0,t.jsx)("p",{className:"consent",children:(0,t.jsx)(s.RichText.Content,{value:k})})]})]})})]})})}})}};const a={};function s(l){const t=a[l];if(void 0!==t)return t.exports;const i=a[l]={exports:{}};return e[l](i,i.exports,s),i.exports}s.m=e,(()=>{const e=[];s.O=(a,l,t,i)=>{if(l){i=i||0;for(var r=e.length;r>0&&e[r-1][2]>i;r--)e[r]=e[r-1];return void(e[r]=[l,t,i])}let n=1/0;for(r=0;r<e.length;r++){let[l,t,i]=e[r],c=!0;for(var o=0;o<l.length;o++)(!1&i||n>=i)&&Object.keys(s.O).every(e=>s.O[e](l[o]))?l.splice(o--,1):(c=!1,i<n&&(n=i));if(c){e.splice(r--,1);const s=t();void 0!==s&&(a=s)}}return a}})(),s.o=(e,a)=>Object.hasOwn(e,a),(()=>{const e={445:0,769:0};s.O.j=a=>0===e[a];const a=(a,l)=>{let[t,i,r]=l;var n,o,c=0;if(t.some(a=>0!==e[a])){for(n in i)s.o(i,n)&&(s.m[n]=i[n]);if(r)var d=r(s)}for(a&&a(l);c<t.length;c++)o=t[c],s.o(e,o)&&e[o]&&e[o][0](),e[o]=0;return s.O(d)},l=globalThis.webpackChunkblocks_garage||=[];l.forEach(a.bind(null,0)),l.push=a.bind(null,l.push.bind(l))})();let l=s.O(void 0,[769],()=>s(926));l=s.O(l)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/block-forms/edit.js"
+/*!*********************************!*\
+  !*** ./src/block-forms/edit.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/block-forms/editor.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+const STATEMENT_ALLOWED_FORMATS = ["core/bold", "core/italic", "core/link", "core/text-color"];
+const CONSENT_ALLOWED_FORMATS = ["core/bold", "core/italic", "core/link"];
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    statementText,
+    ratingPlatform,
+    ratingScore,
+    ratingStars,
+    ratingCount,
+    yandexWidgetIframeSrc,
+    yandexWidgetLinkHref,
+    yandexWidgetLinkText,
+    yandexWidgetHeight,
+    mapLocationText,
+    mapImageUrl,
+    mapImageAlt,
+    mapLinkText,
+    mapLinkHref,
+    discountBadge,
+    formTitle,
+    formSubtitle,
+    formShortcode,
+    consentText
+  } = attributes;
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    className: "forms-block"
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
+      group: "inline"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Вступительный текст", "blocks-garage"),
+        initialOpen: false,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          style: {
+            margin: "0 0 8px",
+            fontSize: "12px",
+            color: "#757575"
+          },
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст редактируется прямо в блоке. Выделите слово и сделайте его жирным (кнопка B).", "blocks-garage")
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Виджет рейтинга", "blocks-garage"),
+        initialOpen: false,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Iframe src (Яндекс виджет)", "blocks-garage"),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Например: https://yandex.ru/maps-reviews-widget/.....?comments", "blocks-garage"),
+          value: yandexWidgetIframeSrc,
+          onChange: val => setAttributes({
+            yandexWidgetIframeSrc: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Ссылка под виджетом", "blocks-garage"),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Например: https://yandex.ru/maps/org/.../", "blocks-garage"),
+          value: yandexWidgetLinkHref,
+          onChange: val => setAttributes({
+            yandexWidgetLinkHref: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст ссылки под виджетом", "blocks-garage"),
+          value: yandexWidgetLinkText,
+          onChange: val => setAttributes({
+            yandexWidgetLinkText: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Высота виджета (px)", "blocks-garage"),
+          type: "number",
+          value: yandexWidgetHeight,
+          onChange: val => setAttributes({
+            yandexWidgetHeight: Number(val || 0)
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          style: {
+            margin: "12px 0",
+            height: "1px",
+            background: "#eee"
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Платформа", "blocks-garage"),
+          value: ratingPlatform,
+          onChange: val => setAttributes({
+            ratingPlatform: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Оценка (число)", "blocks-garage"),
+          value: ratingScore,
+          onChange: val => setAttributes({
+            ratingScore: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Звёзды (символы)", "blocks-garage"),
+          value: ratingStars,
+          onChange: val => setAttributes({
+            ratingStars: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Количество оценок", "blocks-garage"),
+          value: ratingCount,
+          onChange: val => setAttributes({
+            ratingCount: val
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Виджет карты", "blocks-garage"),
+        initialOpen: false,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+            onSelect: media => {
+              setAttributes({
+                mapImageUrl: media.url,
+                mapImageAlt: media.alt || mapImageAlt
+              });
+            },
+            allowedTypes: ["image"],
+            value: mapImageUrl,
+            render: ({
+              open
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              style: {
+                marginBottom: "12px"
+              },
+              children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                style: {
+                  marginBottom: "8px"
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                  src: mapImageUrl,
+                  alt: mapImageAlt,
+                  style: {
+                    maxWidth: "100%",
+                    height: "auto",
+                    display: "block",
+                    borderRadius: "4px"
+                  }
+                })
+              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                variant: "secondary",
+                onClick: open,
+                children: mapImageUrl ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Заменить изображение карты", "blocks-garage") : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Выбрать изображение карты", "blocks-garage")
+              })]
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Alt-текст изображения карты", "blocks-garage"),
+          value: mapImageAlt,
+          onChange: val => setAttributes({
+            mapImageAlt: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст локации", "blocks-garage"),
+          value: mapLocationText,
+          onChange: val => setAttributes({
+            mapLocationText: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Текст ссылки", "blocks-garage"),
+          value: mapLinkText,
+          onChange: val => setAttributes({
+            mapLinkText: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("URL ссылки", "blocks-garage"),
+          value: mapLinkHref,
+          onChange: val => setAttributes({
+            mapLinkHref: val
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Форма заявки", "blocks-garage"),
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Бейдж скидки", "blocks-garage"),
+          value: discountBadge,
+          onChange: val => setAttributes({
+            discountBadge: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Подзаголовок формы", "blocks-garage"),
+          value: formSubtitle,
+          onChange: val => setAttributes({
+            formSubtitle: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Шорткод Contact Form 7", "blocks-garage"),
+          help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Вставьте шорткод вида: [contact-form-7 id="123" title="..."]', "blocks-garage"),
+          value: formShortcode,
+          onChange: val => setAttributes({
+            formShortcode: val
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
+        className: "intro-forms",
+        style: {
+          paddingTop: 0
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "intro-statement wrap",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+            tagName: "p",
+            value: statementText,
+            onChange: val => setAttributes({
+              statementText: val
+            }),
+            allowedFormats: STATEMENT_ALLOWED_FORMATS,
+            preserveWhiteSpace: true
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "wrap",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "hero-grid",
+            style: {
+              alignItems: "stretch"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "side",
+              style: {
+                flexDirection: "row",
+                flexWrap: "wrap"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "card rating-card",
+                style: {
+                  flex: 1,
+                  minWidth: 240
+                },
+                children: yandexWidgetIframeSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  style: {
+                    width: "100%",
+                    height: yandexWidgetHeight || 800,
+                    overflow: "hidden",
+                    position: "relative"
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("iframe", {
+                    title: "Yandex Maps Reviews",
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      border: "1px solid #e6e6e6",
+                      borderRadius: "8px",
+                      boxSizing: "border-box"
+                    },
+                    src: yandexWidgetIframeSrc
+                  }), yandexWidgetLinkHref ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                    href: yandexWidgetLinkHref,
+                    target: "_blank",
+                    rel: "noreferrer",
+                    style: {
+                      boxSizing: "border-box",
+                      textDecoration: "none",
+                      color: "#b3b3b3",
+                      fontSize: "10px",
+                      fontFamily: "YS Text, sans-serif",
+                      position: "absolute",
+                      bottom: "8px",
+                      width: "100%",
+                      textAlign: "center",
+                      left: 0,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      display: "block",
+                      maxHeight: "14px",
+                      whiteSpace: "nowrap",
+                      padding: "0 16px"
+                    },
+                    children: yandexWidgetLinkText || (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Открыть в Яндекс Картах", "blocks-garage")
+                  }) : null]
+                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "platform",
+                    children: ratingPlatform
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "score",
+                    children: [ratingScore, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                      className: "stars",
+                      children: ratingStars
+                    })]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "count",
+                    children: ratingCount
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "card map-card",
+                style: {
+                  flex: 1,
+                  minWidth: 240,
+                  padding: 0
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "map-visual",
+                  children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                    src: mapImageUrl,
+                    alt: mapImageAlt
+                  }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "pin",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "pin-dot"
+                    })
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "map-info",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    children: mapLocationText
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+                    href: mapLinkHref,
+                    children: mapLinkText
+                  })]
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card form-card",
+              id: "lead-mini",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "discount",
+                children: discountBadge
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                tagName: "h3",
+                value: formTitle,
+                onChange: val => setAttributes({
+                  formTitle: val
+                }),
+                allowedFormats: []
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                className: "sub",
+                children: formSubtitle
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                style: {
+                  padding: "12px 14px",
+                  border: "1px dashed #555",
+                  borderRadius: "4px",
+                  color: "#c9c9c9",
+                  background: "#101010",
+                  fontFamily: "monospace",
+                  fontSize: "12px",
+                  whiteSpace: "pre-wrap"
+                },
+                children: formShortcode || '[contact-form-7 id="123" title="..."]'
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                className: "consent",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  value: consentText,
+                  onChange: val => setAttributes({
+                    consentText: val
+                  }),
+                  allowedFormats: CONSENT_ALLOWED_FORMATS,
+                  preserveWhiteSpace: true
+                })
+              })]
+            })]
+          })
+        })]
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./src/block-forms/index.js"
+/*!**********************************!*\
+  !*** ./src/block-forms/index.js ***!
+  \**********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/block-forms/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/block-forms/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/block-forms/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/block-forms/block.json");
+
+
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+/***/ },
+
+/***/ "./src/block-forms/save.js"
+/*!*********************************!*\
+  !*** ./src/block-forms/save.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function save({
+  attributes
+}) {
+  const {
+    statementText,
+    ratingPlatform,
+    ratingScore,
+    ratingStars,
+    ratingCount,
+    yandexWidgetIframeSrc,
+    yandexWidgetLinkHref,
+    yandexWidgetLinkText,
+    yandexWidgetHeight,
+    mapLocationText,
+    mapImageUrl,
+    mapImageAlt,
+    mapLinkText,
+    mapLinkHref,
+    discountBadge,
+    formTitle,
+    formSubtitle,
+    formShortcode,
+    consentText
+  } = attributes;
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
+    className: "forms-block"
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+    ...blockProps,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+      className: "intro-forms",
+      style: {
+        paddingTop: 0
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "intro-statement wrap",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: "p",
+          value: statementText
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "wrap",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "hero-grid",
+          style: {
+            alignItems: "stretch"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "side",
+            style: {
+              flexDirection: "row",
+              flexWrap: "wrap"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "card rating-card",
+              style: {
+                flex: 1,
+                minWidth: 240
+              },
+              children: yandexWidgetIframeSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                style: {
+                  width: "100%",
+                  height: yandexWidgetHeight || 800,
+                  overflow: "hidden",
+                  position: "relative"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
+                  title: "Yandex Maps Reviews",
+                  style: {
+                    width: "100%",
+                    height: "100%",
+                    border: "1px solid #e6e6e6",
+                    borderRadius: "8px",
+                    boxSizing: "border-box"
+                  },
+                  src: yandexWidgetIframeSrc
+                }), yandexWidgetLinkHref ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                  href: yandexWidgetLinkHref,
+                  target: "_blank",
+                  rel: "noreferrer",
+                  style: {
+                    boxSizing: "border-box",
+                    textDecoration: "none",
+                    color: "#b3b3b3",
+                    fontSize: "10px",
+                    fontFamily: "YS Text, sans-serif",
+                    position: "absolute",
+                    bottom: "8px",
+                    width: "100%",
+                    textAlign: "center",
+                    left: 0,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    display: "block",
+                    maxHeight: "14px",
+                    whiteSpace: "nowrap",
+                    padding: "0 16px"
+                  },
+                  children: yandexWidgetLinkText || "Открыть в Яндекс Картах"
+                }) : null]
+              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  className: "platform",
+                  children: ratingPlatform
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "score",
+                  children: [ratingScore, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    className: "stars",
+                    children: ratingStars
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  className: "count",
+                  children: ratingCount
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "card map-card",
+              style: {
+                flex: 1,
+                minWidth: 240,
+                padding: 0
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                className: "map-visual",
+                children: [mapImageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                  src: mapImageUrl,
+                  alt: mapImageAlt
+                }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  className: "pin",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "pin-dot"
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                className: "map-info",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  children: mapLocationText
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                  href: mapLinkHref,
+                  children: mapLinkText
+                })]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "card form-card",
+            id: "lead-mini",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "discount",
+              children: discountBadge
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+              tagName: "h3",
+              value: formTitle
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              className: "sub",
+              children: formSubtitle
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "cf7-form",
+              children: formShortcode
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              className: "consent",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+                value: consentText
+              })
+            })]
+          })]
+        })
+      })]
+    })
+  });
+}
+
+/***/ },
+
+/***/ "./src/block-forms/editor.scss"
+/*!*************************************!*\
+  !*** ./src/block-forms/editor.scss ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./src/block-forms/style.scss"
+/*!************************************!*\
+  !*** ./src/block-forms/style.scss ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "react/jsx-runtime"
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+(module) {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ },
+
+/***/ "@wordpress/block-editor"
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+(module) {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ },
+
+/***/ "@wordpress/blocks"
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+(module) {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ },
+
+/***/ "@wordpress/components"
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "@wordpress/i18n"
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+(module) {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ },
+
+/***/ "./src/block-forms/block.json"
+/*!************************************!*\
+  !*** ./src/block-forms/block.json ***!
+  \************************************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-garage/block-forms","version":"0.1.0","title":"Block Forms","category":"widgets","icon":"forms","description":"Форма записи на диагностику с виджетами рейтинга и карты.","example":{},"supports":{"html":false},"attributes":{"statementText":{"type":"string","source":"html","selector":".intro-statement p","default":"Диагностика авто в автосервисе «Гараж САО»: <b>комплексная и поузловая</b> — точно определим неисправности и стоимость ремонта."},"ratingPlatform":{"type":"string","default":"Яндекс Карты"},"ratingScore":{"type":"string","default":"4,9"},"ratingStars":{"type":"string","default":"★★★★★"},"ratingCount":{"type":"string","default":"Более 900 оценок клиентов"},"yandexWidgetIframeSrc":{"type":"string","default":""},"yandexWidgetLinkHref":{"type":"string","default":""},"yandexWidgetLinkText":{"type":"string","default":""},"yandexWidgetHeight":{"type":"number","default":800},"mapLocationText":{"type":"string","default":"Гараж САО, СВАО Москвы"},"mapImageUrl":{"type":"string","default":""},"mapImageAlt":{"type":"string","default":"Карта"},"mapLinkText":{"type":"string","default":"Открыть карту →"},"mapLinkHref":{"type":"string","default":"#"},"discountBadge":{"type":"string","default":"Скидка 5% при записи на сайте"},"formTitle":{"type":"string","source":"html","selector":".form-card h3","default":"Записаться на диагностику"},"formSubtitle":{"type":"string","default":"Оставьте заявку — перезвоним и подберём удобное время в течение 10 минут."},"formShortcode":{"type":"string","default":"[contact-form-7 id=\\"6155b65\\" title=\\"Главная форма\\"]"},"formNamePlaceholder":{"type":"string","default":"Ваше имя"},"formTelPlaceholder":{"type":"string","default":"+7 (999) 999-99-99"},"formButtonText":{"type":"string","default":"Отправить"},"consentText":{"type":"string","source":"html","selector":".form-card .consent","default":"Нажимая «Отправить», вы соглашаетесь на обработку персональных данных согласно <a href=\\"#\\">политике конфиденциальности</a>."}},"textdomain":"blocks-garage","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		const deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			let notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				let [chunkIds, fn, priority] = deferred[i];
+/******/ 				let fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					const r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			const getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter/value functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.hasOwn(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		const installedChunks = {
+/******/ 			"block-forms/index": 0,
+/******/ 			"block-forms/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		const webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			let [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		const chunkLoadingGlobal = globalThis["webpackChunkblocks_garage"] ||= [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	let __webpack_exports__ = __webpack_require__.O(undefined, ["block-forms/style-index"], () => (__webpack_require__("./src/block-forms/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

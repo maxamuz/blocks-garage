@@ -1,0 +1,1 @@
+{"version":3,"file":"block-process/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAC,uBAAuB,CAAC,C","sources":["webpack://blocks-garage/./src/block-process/view.js"],"sourcesContent":["console.log(\"Block Process loaded.\");\n"],"names":["console","log"],"sourceRoot":""}
