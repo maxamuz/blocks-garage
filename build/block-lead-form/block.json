@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocks-garage/block-lead-form",
+  "version": "0.1.0",
+  "title": "Block Lead Form",
+  "category": "widgets",
+  "icon": "forms",
+  "description": "Секция заявки на диагностику с левой текстовой частью и формой (или CF7-шорткодом).",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "blocks-garage",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Оставить заявку"
+    },
+    "heading": {
+      "type": "string",
+      "default": "Запишитесь на диагностику"
+    },
+    "leadText": {
+      "type": "string",
+      "default": "Расскажите, что беспокоит в автомобиле — подберём вид диагностики, назовём точную цену и запишем на удобное время."
+    },
+    "points": {
+      "type": "array",
+      "default": [
+        "Ответим и перезвоним в течение 10 минут",
+        "Назовём точную стоимость до приезда",
+        "Диагностика бесплатно при ремонте у нас"
+      ]
+    },
+    "useCF7": {
+      "type": "boolean",
+      "default": false
+    },
+    "formShortcode": {
+      "type": "string",
+      "default": ""
+    },
+    "formTitle": {
+      "type": "string",
+      "default": "Заявка на диагностику"
+    },
+    "formNamePlaceholder": {
+      "type": "string",
+      "default": "Ваше имя"
+    },
+    "formTelPlaceholder": {
+      "type": "string",
+      "default": "+7 (999) 999-99-99"
+    },
+    "formButtonText": {
+      "type": "string",
+      "default": "Отправить заявку"
+    },
+    "consentText": {
+      "type": "string",
+      "default": "Нажимая «Отправить заявку», вы соглашаетесь на обработку персональных данных и принимаете условия политики конфиденциальности."
+    },
+    "consentLinkText": {
+      "type": "string",
+      "default": "политики конфиденциальности"
+    },
+    "consentLinkHref": {
+      "type": "string",
+      "default": "#"
+    }
+  }
+}

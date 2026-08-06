@@ -1,0 +1,18 @@
+.wp-block-blocks-garage-block-lead-form {
+	input,
+	button {
+		pointer-events: none;
+	}
+
+	.cf7-shortcode-preview {
+		font-family: "Courier New", monospace;
+		font-size: 12px;
+		color: var(--muted);
+		background: #101010;
+		border: 1px dashed var(--line);
+		border-radius: var(--radius);
+		padding: 14px;
+		margin-bottom: 8px;
+		word-break: break-all;
+	}
+}

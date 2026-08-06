@@ -275,6 +275,85 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-lead-form' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-lead-form',
+		'version' => '0.1.0',
+		'title' => 'Block Lead Form',
+		'category' => 'widgets',
+		'icon' => 'forms',
+		'description' => 'Секция заявки на диагностику с левой текстовой частью и формой (или CF7-шорткодом).',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js',
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Оставить заявку'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Запишитесь на диагностику'
+			),
+			'leadText' => array(
+				'type' => 'string',
+				'default' => 'Расскажите, что беспокоит в автомобиле — подберём вид диагностики, назовём точную цену и запишем на удобное время.'
+			),
+			'points' => array(
+				'type' => 'array',
+				'default' => array(
+					'Ответим и перезвоним в течение 10 минут',
+					'Назовём точную стоимость до приезда',
+					'Диагностика бесплатно при ремонте у нас'
+				)
+			),
+			'useCF7' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'formShortcode' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'formTitle' => array(
+				'type' => 'string',
+				'default' => 'Заявка на диагностику'
+			),
+			'formNamePlaceholder' => array(
+				'type' => 'string',
+				'default' => 'Ваше имя'
+			),
+			'formTelPlaceholder' => array(
+				'type' => 'string',
+				'default' => '+7 (999) 999-99-99'
+			),
+			'formButtonText' => array(
+				'type' => 'string',
+				'default' => 'Отправить заявку'
+			),
+			'consentText' => array(
+				'type' => 'string',
+				'default' => 'Нажимая «Отправить заявку», вы соглашаетесь на обработку персональных данных и принимаете условия политики конфиденциальности.'
+			),
+			'consentLinkText' => array(
+				'type' => 'string',
+				'default' => 'политики конфиденциальности'
+			),
+			'consentLinkHref' => array(
+				'type' => 'string',
+				'default' => '#'
+			)
+		)
+	),
 	'block-price' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
