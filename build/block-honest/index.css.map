@@ -1,1 +1,0 @@
-{"version":3,"file":"block-honest/index.css","mappings":";;;AACC;EACC;EACA;EACA;AAAF,C","sources":["webpack://blocks-garage/./src/block-honest/editor.scss"],"sourcesContent":[".section-alt {\n\t.wrap {\n\t\tmax-width: none;\n\t\tpadding: 0;\n\t\tbackground: #909090;\n\t}\n}\n"],"names":[],"sourceRoot":""}

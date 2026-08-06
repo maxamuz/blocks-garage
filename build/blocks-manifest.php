@@ -275,6 +275,185 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-price' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-price',
+		'version' => '0.1.0',
+		'title' => 'Block Price',
+		'category' => 'widgets',
+		'icon' => 'money-alt',
+		'description' => 'Секция стоимости диагностики с таблицей, боковой картинкой и примечаниями.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js',
+		'attributes' => array(
+			'eyebrow' => array(
+				'type' => 'string',
+				'default' => 'Стоимость'
+			),
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Если выбираете только диагностику'
+			),
+			'col1Header' => array(
+				'type' => 'string',
+				'default' => 'Наименование услуги'
+			),
+			'col2Header' => array(
+				'type' => 'string',
+				'default' => 'Стоимость'
+			),
+			'rows' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'name' => 'Компьютерная диагностика авто',
+						'promo' => true,
+						'tag' => 'Акция',
+						'oldPrice' => '2250 ₽',
+						'newPrice' => '0 ₽',
+						'price' => ''
+					),
+					array(
+						'name' => 'Комплексная диагностика бензиновых и дизельных авто',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					),
+					array(
+						'name' => 'Комплексная диагностика автомобиля иностранного производства',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 3500 ₽'
+					),
+					array(
+						'name' => 'Комплексная диагностика авто отечественного производства',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 2000 ₽'
+					),
+					array(
+						'name' => 'Компьютерная диагностика электроники',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					),
+					array(
+						'name' => 'Диагностика трансмиссии (подвески и ходовой части авто)',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 700 ₽'
+					),
+					array(
+						'name' => 'Компьютерная диагностика трансмиссии МКПП и АКПП',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					),
+					array(
+						'name' => 'Диагностика наружного и внутреннего освещения ТС',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 500 ₽'
+					),
+					array(
+						'name' => 'Диагностика транспортных средств при покупке или продаже',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					),
+					array(
+						'name' => 'Диагностика ДВС',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					),
+					array(
+						'name' => 'Диагностика пневмосистемы',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1500 ₽'
+					),
+					array(
+						'name' => 'Диагностика сход-развал',
+						'promo' => false,
+						'tag' => '',
+						'oldPrice' => '',
+						'newPrice' => '',
+						'price' => 'от 1000 ₽'
+					)
+				),
+				'items' => array(
+					'type' => 'object',
+					'properties' => array(
+						'name' => array(
+							'type' => 'string'
+						),
+						'promo' => array(
+							'type' => 'boolean'
+						),
+						'tag' => array(
+							'type' => 'string'
+						),
+						'oldPrice' => array(
+							'type' => 'string'
+						),
+						'newPrice' => array(
+							'type' => 'string'
+						),
+						'price' => array(
+							'type' => 'string'
+						)
+					)
+				)
+			),
+			'priceNote' => array(
+				'type' => 'string',
+				'default' => 'Итоговая стоимость зависит от марки автомобиля и объёма работ и согласовывается с мастером до начала диагностики.'
+			),
+			'imageSrc' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => 'Оборудование для диагностики автомобиля'
+			),
+			'masterNote' => array(
+				'type' => 'string',
+				'default' => 'Важно: точную цену диагностики мастер называет заранее — по телефону или в чате, до приезда в автосервис. Никаких сюрпризов в чеке.'
+			)
+		)
+	),
 	'block-price-top' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

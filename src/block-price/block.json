@@ -1,0 +1,165 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-garage/block-price",
+	"version": "0.1.0",
+	"title": "Block Price",
+	"category": "widgets",
+	"icon": "money-alt",
+	"description": "Секция стоимости диагностики с таблицей, боковой картинкой и примечаниями.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "blocks-garage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Стоимость"
+		},
+		"heading": {
+			"type": "string",
+			"default": "Если выбираете только диагностику"
+		},
+		"col1Header": {
+			"type": "string",
+			"default": "Наименование услуги"
+		},
+		"col2Header": {
+			"type": "string",
+			"default": "Стоимость"
+		},
+		"rows": {
+			"type": "array",
+			"default": [
+				{
+					"name": "Компьютерная диагностика авто",
+					"promo": true,
+					"tag": "Акция",
+					"oldPrice": "2250 ₽",
+					"newPrice": "0 ₽",
+					"price": ""
+				},
+				{
+					"name": "Комплексная диагностика бензиновых и дизельных авто",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				},
+				{
+					"name": "Комплексная диагностика автомобиля иностранного производства",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 3500 ₽"
+				},
+				{
+					"name": "Комплексная диагностика авто отечественного производства",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 2000 ₽"
+				},
+				{
+					"name": "Компьютерная диагностика электроники",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				},
+				{
+					"name": "Диагностика трансмиссии (подвески и ходовой части авто)",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 700 ₽"
+				},
+				{
+					"name": "Компьютерная диагностика трансмиссии МКПП и АКПП",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				},
+				{
+					"name": "Диагностика наружного и внутреннего освещения ТС",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 500 ₽"
+				},
+				{
+					"name": "Диагностика транспортных средств при покупке или продаже",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				},
+				{
+					"name": "Диагностика ДВС",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				},
+				{
+					"name": "Диагностика пневмосистемы",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1500 ₽"
+				},
+				{
+					"name": "Диагностика сход-развал",
+					"promo": false,
+					"tag": "",
+					"oldPrice": "",
+					"newPrice": "",
+					"price": "от 1000 ₽"
+				}
+			],
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": { "type": "string" },
+					"promo": { "type": "boolean" },
+					"tag": { "type": "string" },
+					"oldPrice": { "type": "string" },
+					"newPrice": { "type": "string" },
+					"price": { "type": "string" }
+				}
+			}
+		},
+		"priceNote": {
+			"type": "string",
+			"default": "Итоговая стоимость зависит от марки автомобиля и объёма работ и согласовывается с мастером до начала диагностики."
+		},
+		"imageSrc": {
+			"type": "string",
+			"default": ""
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": "Оборудование для диагностики автомобиля"
+		},
+		"masterNote": {
+			"type": "string",
+			"default": "Важно: точную цену диагностики мастер называет заранее — по телефону или в чате, до приезда в автосервис. Никаких сюрпризов в чеке."
+		}
+	}
+}
