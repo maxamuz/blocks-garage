@@ -664,5 +664,106 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'block-reviews' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-garage/block-reviews',
+		'version' => '0.1.0',
+		'title' => 'Block Reviews',
+		'category' => 'widgets',
+		'icon' => 'format-status',
+		'description' => 'Блок с карточками рейтинга, карты и CTA.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'yandexWidgetIframeSrc' => array(
+				'type' => 'string',
+				'source' => 'attribute',
+				'selector' => '.rating-card iframe',
+				'attribute' => 'src',
+				'default' => ''
+			),
+			'yandexWidgetLinkHref' => array(
+				'type' => 'string',
+				'source' => 'attribute',
+				'selector' => '.rating-card a.yandex-widget-link',
+				'attribute' => 'href',
+				'default' => ''
+			),
+			'yandexWidgetLinkText' => array(
+				'type' => 'string',
+				'source' => 'html',
+				'selector' => '.rating-card a.yandex-widget-link',
+				'default' => ''
+			),
+			'yandexWidgetHeight' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'ratingPlatform' => array(
+				'type' => 'string',
+				'default' => 'Яндекс Карты'
+			),
+			'ratingScore' => array(
+				'type' => 'string',
+				'default' => '4,9'
+			),
+			'ratingStars' => array(
+				'type' => 'string',
+				'default' => '★★★★★'
+			),
+			'ratingCount' => array(
+				'type' => 'string',
+				'default' => 'Более 900 оценок клиентов'
+			),
+			'mapHeight' => array(
+				'type' => 'number',
+				'default' => 120
+			),
+			'mapImageUrl' => array(
+				'type' => 'string',
+				'source' => 'attribute',
+				'selector' => '.map-card .map-visual img',
+				'attribute' => 'src',
+				'default' => ''
+			),
+			'mapImageAlt' => array(
+				'type' => 'string',
+				'source' => 'attribute',
+				'selector' => '.map-card .map-visual img',
+				'attribute' => 'alt',
+				'default' => 'Карта'
+			),
+			'mapInfoSpan' => array(
+				'type' => 'string',
+				'default' => 'Гараж САО, СВАО Москвы'
+			),
+			'mapInfoHref' => array(
+				'type' => 'string',
+				'default' => '#'
+			),
+			'mapInfoText' => array(
+				'type' => 'string',
+				'default' => 'Открыть карту →'
+			),
+			'ctaHref' => array(
+				'type' => 'string',
+				'default' => '#lead'
+			),
+			'ctaText' => array(
+				'type' => 'string',
+				'default' => 'Записаться на диагностику →'
+			)
+		),
+		'textdomain' => 'blocks-garage',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
 	)
 );

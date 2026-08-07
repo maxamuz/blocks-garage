@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-garage/block-reviews",
+	"version": "0.1.0",
+	"title": "Block Reviews",
+	"category": "widgets",
+	"icon": "format-status",
+	"description": "Блок с карточками рейтинга, карты и CTA.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"yandexWidgetIframeSrc": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".rating-card iframe",
+			"attribute": "src",
+			"default": ""
+		},
+		"yandexWidgetLinkHref": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".rating-card a.yandex-widget-link",
+			"attribute": "href",
+			"default": ""
+		},
+		"yandexWidgetLinkText": {
+			"type": "string",
+			"source": "html",
+			"selector": ".rating-card a.yandex-widget-link",
+			"default": ""
+		},
+		"yandexWidgetHeight": {
+			"type": "number",
+			"default": 800
+		},
+		"ratingPlatform": {
+			"type": "string",
+			"default": "Яндекс Карты"
+		},
+		"ratingScore": {
+			"type": "string",
+			"default": "4,9"
+		},
+		"ratingStars": {
+			"type": "string",
+			"default": "★★★★★"
+		},
+		"ratingCount": {
+			"type": "string",
+			"default": "Более 900 оценок клиентов"
+		},
+		"mapHeight": {
+			"type": "number",
+			"default": 120
+		},
+		"mapImageUrl": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".map-card .map-visual img",
+			"attribute": "src",
+			"default": ""
+		},
+		"mapImageAlt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": ".map-card .map-visual img",
+			"attribute": "alt",
+			"default": "Карта"
+		},
+		"mapInfoSpan": {
+			"type": "string",
+			"default": "Гараж САО, СВАО Москвы"
+		},
+		"mapInfoHref": {
+			"type": "string",
+			"default": "#"
+		},
+		"mapInfoText": {
+			"type": "string",
+			"default": "Открыть карту →"
+		},
+		"ctaHref": {
+			"type": "string",
+			"default": "#lead"
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Записаться на диагностику →"
+		}
+	},
+	"textdomain": "blocks-garage",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
