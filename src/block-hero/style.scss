@@ -277,6 +277,14 @@ p {
 
 	.hero-grid {
 		gap: 36px;
+
+		.hero-content {
+			order: 1;
+		}
+
+		.hero-media-col {
+			order: 2;
+		}
 	}
 
 	.hero h1 {
