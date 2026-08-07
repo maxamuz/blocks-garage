@@ -1,0 +1,1 @@
+{"version":3,"file":"block-reviews/index.css","mappings":";;;AACC;EACC;EACA;EACA;AAAF,C","sources":["webpack://blocks-garage/./src/block-reviews/editor.scss"],"sourcesContent":[".cta-strip {\n\t.wrap {\n\t\tmax-width: none;\n\t\tpadding: 0;\n\t\tbackground: #909090;\n\t}\n}\n"],"names":[],"sourceRoot":""}

@@ -1,1 +1,667 @@
-(()=>{"use strict";var e={352(){const e=window.wp.blocks,s=window.wp.i18n,l=window.wp.blockEditor,i=window.wp.components,a=window.ReactJSXRuntime,t=["core/bold","core/italic","core/text-color","core/link"],c=JSON.parse('{"UU":"blocks-garage/block-process"}');(0,e.registerBlockType)(c.UU,{edit:function({attributes:e,setAttributes:c}){const{imageSrc:r,imageAlt:n,eyebrow:d,heading:o,step1Title:h,step2Title:p,step3Title:m,step4Title:x,step5Title:j}=e,v=(0,l.useBlockProps)({id:"process",className:"process"});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(l.BlockControls,{group:"inline"}),(0,a.jsxs)(l.InspectorControls,{children:[(0,a.jsxs)(i.PanelBody,{title:(0,s.__)("Настройки блока Process","blocks-garage"),initialOpen:!0,children:[(0,a.jsx)(i.TextControl,{label:(0,s.__)("Eyebrow","blocks-garage"),value:d,onChange:e=>c({eyebrow:e})}),(0,a.jsx)("p",{style:{margin:"16px 0 0",fontSize:"12px",color:"#757575"},children:(0,s.__)("Заголовок и шаги редактируются прямо в блоке.","blocks-garage")})]}),(0,a.jsxs)(i.PanelBody,{title:(0,s.__)("Изображение","blocks-garage"),initialOpen:!1,children:[(0,a.jsx)(l.MediaUploadCheck,{children:(0,a.jsx)(l.MediaUpload,{onSelect:e=>{c({imageSrc:e.url,imageAlt:e.alt||n})},allowedTypes:["image"],value:r,render:({open:e})=>(0,a.jsxs)("div",{children:[r?(0,a.jsx)("div",{style:{marginBottom:"8px"},children:(0,a.jsx)("img",{src:r,alt:n,style:{maxWidth:"100%",height:"auto",display:"block"}})}):null,(0,a.jsx)(i.Button,{variant:"secondary",onClick:e,children:r?(0,s.__)("Заменить изображение","blocks-garage"):(0,s.__)("Выбрать изображение","blocks-garage")})]})})}),(0,a.jsx)(i.TextControl,{label:(0,s.__)("Alt-текст изображения","blocks-garage"),value:n,onChange:e=>c({imageAlt:e})})]})]}),(0,a.jsx)("section",{...v,children:(0,a.jsxs)("div",{className:"wrap process-grid",children:[(0,a.jsx)("div",{className:"process-media",children:r?(0,a.jsx)("img",{src:r,alt:n}):(0,a.jsx)("div",{style:{width:"100%",height:"260px",background:"#e0e0e0",display:"flex",alignItems:"center",justifyContent:"center",color:"#666",textAlign:"center",padding:"20px"},children:(0,s.__)("Выберите изображение в настройках","blocks-garage")})}),(0,a.jsxs)("div",{className:"process-text",children:[(0,a.jsx)("div",{className:"eyebrow",children:d}),(0,a.jsx)(l.RichText,{tagName:"h2",value:o,onChange:e=>c({heading:e}),allowedFormats:t,multiline:!1,preserveWhiteSpace:!0}),(0,a.jsxs)("div",{className:"steps",children:[(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"01"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)(l.RichText,{tagName:"h4",value:h,onChange:e=>c({step1Title:e}),allowedFormats:[],multiline:!1,preserveWhiteSpace:!0})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"02"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)(l.RichText,{tagName:"h4",value:p,onChange:e=>c({step2Title:e}),allowedFormats:[],multiline:!1,preserveWhiteSpace:!0})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"03"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)(l.RichText,{tagName:"h4",value:m,onChange:e=>c({step3Title:e}),allowedFormats:[],multiline:!1,preserveWhiteSpace:!0})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"04"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)(l.RichText,{tagName:"h4",value:x,onChange:e=>c({step4Title:e}),allowedFormats:[],multiline:!1,preserveWhiteSpace:!0})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"05"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)(l.RichText,{tagName:"h4",value:j,onChange:e=>c({step5Title:e}),allowedFormats:[],multiline:!1,preserveWhiteSpace:!0})})]})]})]})]})})]})},save:function({attributes:e}){const{imageSrc:s,imageAlt:i,eyebrow:t,heading:c,step1Title:r,step2Title:n,step3Title:d,step4Title:o,step5Title:h}=e,p=l.useBlockProps.save({id:"process",className:"process"});return(0,a.jsx)("section",{...p,children:(0,a.jsxs)("div",{className:"wrap process-grid",children:[(0,a.jsx)("div",{className:"process-media",children:(0,a.jsx)("img",{src:s,alt:i})}),(0,a.jsxs)("div",{className:"process-text",children:[(0,a.jsx)("div",{className:"eyebrow",children:t}),(0,a.jsx)(l.RichText.Content,{tagName:"h2",value:c}),(0,a.jsxs)("div",{className:"steps",children:[(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"01"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)("h4",{children:r})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"02"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)("h4",{children:n})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"03"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)("h4",{children:d})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"04"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)("h4",{children:o})})]}),(0,a.jsxs)("div",{className:"step",children:[(0,a.jsx)("div",{className:"step-num",children:"05"}),(0,a.jsx)("div",{className:"step-body",children:(0,a.jsx)("h4",{children:h})})]})]})]})]})})}})}};const s={};function l(i){const a=s[i];if(void 0!==a)return a.exports;const t=s[i]={exports:{}};return e[i](t,t.exports,l),t.exports}l.m=e,(()=>{const e=[];l.O=(s,i,a,t)=>{if(i){t=t||0;for(var c=e.length;c>0&&e[c-1][2]>t;c--)e[c]=e[c-1];return void(e[c]=[i,a,t])}let r=1/0;for(c=0;c<e.length;c++){let[i,a,t]=e[c],d=!0;for(var n=0;n<i.length;n++)(!1&t||r>=t)&&Object.keys(l.O).every(e=>l.O[e](i[n]))?i.splice(n--,1):(d=!1,t<r&&(r=t));if(d){e.splice(c--,1);const l=a();void 0!==l&&(s=l)}}return s}})(),l.o=(e,s)=>Object.hasOwn(e,s),(()=>{const e={311:0,932:0};l.O.j=s=>0===e[s];const s=(s,i)=>{let[a,t,c]=i;var r,n,d=0;if(a.some(s=>0!==e[s])){for(r in t)l.o(t,r)&&(l.m[r]=t[r]);if(c)var o=c(l)}for(s&&s(i);d<a.length;d++)n=a[d],l.o(e,n)&&e[n]&&e[n][0](),e[n]=0;return l.O(o)},i=globalThis.webpackChunkblocks_garage||=[];i.forEach(s.bind(null,0)),i.push=s.bind(null,i.push.bind(i))})();let i=l.O(void 0,[932],()=>l(352));i=l.O(i)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/block-process/edit.js"
+/*!***********************************!*\
+  !*** ./src/block-process/edit.js ***!
+  \***********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/block-process/editor.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+const HEADING_ALLOWED_FORMATS = ["core/bold", "core/italic", "core/text-color", "core/link"];
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    imageSrc,
+    imageAlt,
+    eyebrow,
+    heading,
+    step1Title,
+    step2Title,
+    step3Title,
+    step4Title,
+    step5Title
+  } = attributes;
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    id: "process",
+    className: "process"
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
+      group: "inline"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Настройки блока Process", "blocks-garage"),
+        initialOpen: true,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Eyebrow", "blocks-garage"),
+          value: eyebrow,
+          onChange: val => setAttributes({
+            eyebrow: val
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+          style: {
+            margin: "16px 0 0",
+            fontSize: "12px",
+            color: "#757575"
+          },
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Заголовок и шаги редактируются прямо в блоке.", "blocks-garage")
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Изображение", "blocks-garage"),
+        initialOpen: false,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+            onSelect: media => {
+              setAttributes({
+                imageSrc: media.url,
+                imageAlt: media.alt || imageAlt
+              });
+            },
+            allowedTypes: ["image"],
+            value: imageSrc,
+            render: ({
+              open
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              children: [imageSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                style: {
+                  marginBottom: "8px"
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                  src: imageSrc,
+                  alt: imageAlt,
+                  style: {
+                    maxWidth: "100%",
+                    height: "auto",
+                    display: "block"
+                  }
+                })
+              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                variant: "secondary",
+                onClick: open,
+                children: imageSrc ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Заменить изображение", "blocks-garage") : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Выбрать изображение", "blocks-garage")
+              })]
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Alt-текст изображения", "blocks-garage"),
+          value: imageAlt,
+          onChange: val => setAttributes({
+            imageAlt: val
+          })
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("section", {
+      ...blockProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "wrap process-grid",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "process-media",
+          children: imageSrc ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+            src: imageSrc,
+            alt: imageAlt
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            style: {
+              width: "100%",
+              height: "260px",
+              background: "#e0e0e0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#666",
+              textAlign: "center",
+              padding: "20px"
+            },
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Выберите изображение в настройках", "blocks-garage")
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "process-text",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "eyebrow",
+            children: eyebrow
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+            tagName: "h2",
+            value: heading,
+            onChange: val => setAttributes({
+              heading: val
+            }),
+            allowedFormats: HEADING_ALLOWED_FORMATS,
+            multiline: false,
+            preserveWhiteSpace: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "steps",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "step",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-num",
+                children: "01"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-body",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  tagName: "h4",
+                  value: step1Title,
+                  onChange: val => setAttributes({
+                    step1Title: val
+                  }),
+                  allowedFormats: [],
+                  multiline: false,
+                  preserveWhiteSpace: true
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "step",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-num",
+                children: "02"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-body",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  tagName: "h4",
+                  value: step2Title,
+                  onChange: val => setAttributes({
+                    step2Title: val
+                  }),
+                  allowedFormats: [],
+                  multiline: false,
+                  preserveWhiteSpace: true
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "step",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-num",
+                children: "03"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-body",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  tagName: "h4",
+                  value: step3Title,
+                  onChange: val => setAttributes({
+                    step3Title: val
+                  }),
+                  allowedFormats: [],
+                  multiline: false,
+                  preserveWhiteSpace: true
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "step",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-num",
+                children: "04"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-body",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  tagName: "h4",
+                  value: step4Title,
+                  onChange: val => setAttributes({
+                    step4Title: val
+                  }),
+                  allowedFormats: [],
+                  multiline: false,
+                  preserveWhiteSpace: true
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "step",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-num",
+                children: "05"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "step-body",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                  tagName: "h4",
+                  value: step5Title,
+                  onChange: val => setAttributes({
+                    step5Title: val
+                  }),
+                  allowedFormats: [],
+                  multiline: false,
+                  preserveWhiteSpace: true
+                })
+              })]
+            })]
+          })]
+        })]
+      })
+    })]
+  });
+}
+
+/***/ },
+
+/***/ "./src/block-process/index.js"
+/*!************************************!*\
+  !*** ./src/block-process/index.js ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/block-process/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/block-process/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/block-process/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/block-process/block.json");
+
+
+
+
+
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+/***/ },
+
+/***/ "./src/block-process/save.js"
+/*!***********************************!*\
+  !*** ./src/block-process/save.js ***!
+  \***********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function save({
+  attributes
+}) {
+  const {
+    imageSrc,
+    imageAlt,
+    eyebrow,
+    heading,
+    step1Title,
+    step2Title,
+    step3Title,
+    step4Title,
+    step5Title
+  } = attributes;
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
+    id: "process",
+    className: "process"
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+    ...blockProps,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "wrap process-grid",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "process-media",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: imageSrc,
+          alt: imageAlt
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "process-text",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "eyebrow",
+          children: eyebrow
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: "h2",
+          value: heading
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "steps",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "step",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-num",
+              children: "01"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                children: step1Title
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "step",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-num",
+              children: "02"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                children: step2Title
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "step",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-num",
+              children: "03"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                children: step3Title
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "step",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-num",
+              children: "04"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                children: step4Title
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "step",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-num",
+              children: "05"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "step-body",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                children: step5Title
+              })
+            })]
+          })]
+        })]
+      })]
+    })
+  });
+}
+
+/***/ },
+
+/***/ "./src/block-process/editor.scss"
+/*!***************************************!*\
+  !*** ./src/block-process/editor.scss ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "./src/block-process/style.scss"
+/*!**************************************!*\
+  !*** ./src/block-process/style.scss ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ },
+
+/***/ "react/jsx-runtime"
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+(module) {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ },
+
+/***/ "@wordpress/block-editor"
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+(module) {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ },
+
+/***/ "@wordpress/blocks"
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+(module) {
+
+module.exports = window["wp"]["blocks"];
+
+/***/ },
+
+/***/ "@wordpress/components"
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ },
+
+/***/ "@wordpress/i18n"
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+(module) {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ },
+
+/***/ "./src/block-process/block.json"
+/*!**************************************!*\
+  !*** ./src/block-process/block.json ***!
+  \**************************************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-garage/block-process","version":"0.1.0","title":"Block Process","category":"akcii","icon":"editor-ol","description":"Блок «Как это устроено» с шагами процесса диагностики.","example":{},"supports":{"html":false},"attributes":{"imageSrc":{"type":"string","default":"diag-process.jpg"},"imageAlt":{"type":"string","default":"Компьютерная диагностика автомобиля"},"eyebrow":{"type":"string","default":"Как это устроено"},"heading":{"type":"string","source":"html","selector":".process-text h2","default":"В автосервисе «Гараж САО» диагностика легковых автомобилей — это не «посмотреть и сказать», а системный процесс"},"step1Title":{"type":"string","default":"Визуальный осмотр и фотофиксация"},"step2Title":{"type":"string","default":"Компьютерная диагностика электронных систем"},"step3Title":{"type":"string","default":"Поузловая проверка: подвеска, тормозная система, рулевое управление, трансмиссия и т. д."},"step4Title":{"type":"string","default":"Оценка степени износа деталей"},"step5Title":{"type":"string","default":"Формирование полного отчёта и расчёт стоимости ремонта (если требуется)."}},"textdomain":"blocks-garage","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		const deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			let notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				let [chunkIds, fn, priority] = deferred[i];
+/******/ 				let fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					const r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			const getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter/value functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.hasOwn(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		const installedChunks = {
+/******/ 			"block-process/index": 0,
+/******/ 			"block-process/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		const webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			let [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		const chunkLoadingGlobal = globalThis["webpackChunkblocks_garage"] ||= [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	let __webpack_exports__ = __webpack_require__.O(undefined, ["block-process/style-index"], () => (__webpack_require__("./src/block-process/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"block-honest/view.js","mappings":";;;;AAAAA,OAAO,CAACC,GAAG,CAAC,sBAAsB,CAAC,C","sources":["webpack://blocks-garage/./src/block-honest/view.js"],"sourcesContent":["console.log(\"Block Honest loaded.\");\n"],"names":["console","log"],"sourceRoot":""}
