@@ -4,7 +4,7 @@
 	"name": "blocks-garage/block-honest",
 	"version": "0.1.0",
 	"title": "Block Honest",
-	"category": "widgets",
+	"category": "akcii",
 	"icon": "shield",
 	"description": "Блок «Наш подход» с карточками (репитер).",
 	"example": {},

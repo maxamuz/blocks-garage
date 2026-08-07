@@ -4,7 +4,7 @@
   "name": "blocks-garage/block-lead-form",
   "version": "0.1.0",
   "title": "Block Lead Form",
-  "category": "widgets",
+  "category": "akcii",
   "icon": "forms",
   "description": "Секция заявки на диагностику с левой текстовой частью и формой (или CF7-шорткодом).",
   "example": {},

@@ -4,7 +4,7 @@
   "name": "blocks-garage/block-reviews",
   "version": "0.1.0",
   "title": "Block Reviews",
-  "category": "widgets",
+  "category": "akcii",
   "icon": "format-status",
   "description": "Блок с карточками рейтинга, карты и CTA.",
   "example": {},

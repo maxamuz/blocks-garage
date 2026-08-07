@@ -4,7 +4,7 @@
 	"name": "blocks-garage/block-price",
 	"version": "0.1.0",
 	"title": "Block Price",
-	"category": "widgets",
+	"category": "akcii",
 	"icon": "money-alt",
 	"description": "Секция стоимости диагностики с таблицей, боковой картинкой и примечаниями.",
 	"example": {},

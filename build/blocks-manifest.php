@@ -7,7 +7,7 @@ return array(
 		'name' => 'blocks-garage/block-forms',
 		'version' => '0.1.0',
 		'title' => 'Block Forms',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'forms',
 		'description' => 'Форма записи на диагностику с виджетами рейтинга и карты.',
 		'example' => array(
@@ -124,7 +124,7 @@ return array(
 		'name' => 'blocks-garage/block-hero',
 		'version' => '0.1.0',
 		'title' => 'Block Hero',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'car',
 		'description' => 'Hero-блок с акционным предложением автосервиса.',
 		'example' => array(
@@ -217,7 +217,7 @@ return array(
 		'name' => 'blocks-garage/block-honest',
 		'version' => '0.1.0',
 		'title' => 'Block Honest',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'shield',
 		'description' => 'Блок «Наш подход» с карточками (репитер).',
 		'example' => array(
@@ -281,7 +281,7 @@ return array(
 		'name' => 'blocks-garage/block-lead-form',
 		'version' => '0.1.0',
 		'title' => 'Block Lead Form',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'forms',
 		'description' => 'Секция заявки на диагностику с левой текстовой частью и формой (или CF7-шорткодом).',
 		'example' => array(
@@ -360,7 +360,7 @@ return array(
 		'name' => 'blocks-garage/block-price',
 		'version' => '0.1.0',
 		'title' => 'Block Price',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'money-alt',
 		'description' => 'Секция стоимости диагностики с таблицей, боковой картинкой и примечаниями.',
 		'example' => array(
@@ -539,7 +539,7 @@ return array(
 		'name' => 'blocks-garage/block-price-top',
 		'version' => '0.1.0',
 		'title' => 'Block Price Top',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'table-col-after',
 		'description' => 'Таблица с ценами на услуги автосервиса (акционный блок сверху).',
 		'example' => array(
@@ -610,7 +610,7 @@ return array(
 		'name' => 'blocks-garage/block-process',
 		'version' => '0.1.0',
 		'title' => 'Block Process',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'editor-ol',
 		'description' => 'Блок «Как это устроено» с шагами процесса диагностики.',
 		'example' => array(
@@ -671,7 +671,7 @@ return array(
 		'name' => 'blocks-garage/block-reviews',
 		'version' => '0.1.0',
 		'title' => 'Block Reviews',
-		'category' => 'widgets',
+		'category' => 'akcii',
 		'icon' => 'format-status',
 		'description' => 'Блок с карточками рейтинга, карты и CTA.',
 		'example' => array(

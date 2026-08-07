@@ -4,7 +4,7 @@
 	"name": "blocks-garage/block-process",
 	"version": "0.1.0",
 	"title": "Block Process",
-	"category": "widgets",
+	"category": "akcii",
 	"icon": "editor-ol",
 	"description": "Блок «Как это устроено» с шагами процесса диагностики.",
 	"example": {},

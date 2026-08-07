@@ -4,7 +4,7 @@
   "name": "blocks-garage/block-price-top",
   "version": "0.1.0",
   "title": "Block Price Top",
-  "category": "widgets",
+  "category": "akcii",
   "icon": "table-col-after",
   "description": "Таблица с ценами на услуги автосервиса (акционный блок сверху).",
   "example": {},

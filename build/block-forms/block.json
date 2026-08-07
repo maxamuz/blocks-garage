@@ -4,7 +4,7 @@
   "name": "blocks-garage/block-forms",
   "version": "0.1.0",
   "title": "Block Forms",
-  "category": "widgets",
+  "category": "akcii",
   "icon": "forms",
   "description": "Форма записи на диагностику с виджетами рейтинга и карты.",
   "example": {},

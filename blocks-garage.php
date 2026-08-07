@@ -30,3 +30,18 @@ function create_block_blocks_garage_block_init()
 	wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
 }
 add_action('init', 'create_block_blocks_garage_block_init');
+
+/**
+ * Добавляет кастомную категорию «Акции» в инсертере блоков Gutenberg.
+ */
+function blocks_garage_add_custom_categories($categories)
+{
+	return array_merge([
+		[
+			'slug'  => 'akcii',
+			'title' => __('Акции', 'blocks-garage'),
+			'icon'  => 'star-filled',
+		],
+	], $categories);
+}
+add_filter('block_categories_all', 'blocks_garage_add_custom_categories', 10, 1);

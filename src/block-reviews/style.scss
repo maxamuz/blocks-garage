@@ -42,7 +42,6 @@ p {
 }
 
 .card {
-	background: var(--bg-card);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	padding: 24px;
@@ -52,6 +51,69 @@ p {
 	&:hover {
 		border-color: rgba(255, 200, 20, 0.3);
 	}
+}
+
+.lead-grid .eyebrow {
+	background: rgba(245, 197, 24, 0.08);
+	border: 1px solid rgba(245, 197, 24, 0.18);
+	padding: 6px 14px;
+}
+
+.lead-form {
+	form {
+		input {
+			background: #101010;
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			color: var(--white);
+			font-family: Montserrat, sans-serif;
+			font-size: 14px;
+			outline: none;
+			padding: 14px 16px;
+			transition:
+				border-color 0.15s ease,
+				background 0.15s ease;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background-color: #f5b41a;
+			color: #111;
+			font-family: Montserrat, sans-serif;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+
+		.wpcf7-list-item-label a {
+			color: var(--muted-2);
+			font-weight: 500;
+		}
+
+		.wpcf7-list-item-label {
+			font-size: 12px;
+			display: flex;
+			align-items: baseline;
+		}
+	}
+
+	.form-agreement {
+		color: var(--muted-2);
+		font-size: 14px;
+		line-height: 1.5;
+		margin-top: 12px;
+	}
+
+	&:hover {
+		border-color: var(--yellow);
+	}
+}
+
+input[type="checkbox"] + span:before,
+input[type="checkbox"] + label:before,
+input[type="radio"] + span:before,
+input[type="radio"] + label:before {
+	left: -10px !important;
+	top: 3px !important;
 }
 
 .rating-card {
